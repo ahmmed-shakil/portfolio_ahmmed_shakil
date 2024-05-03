@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Quicksand:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --primary: #04AA6D;
+  --primary-dark: #038a5b; /* Darker shade of primary color */
+  --primary-light: #5cd3b5; /* Lighter shade of primary color */
+  --secondary: #141414;
+  --final: #26ABD4;
+  --third: #FFF4A3;
+  --last: #FFFDF7;
+}
+
+
+/* You can use these variables for styling elements */
+.gradient-background {
+  background: linear-gradient(var(--primary-dark), var(--primary), var(--primary-light));
+}
+.gradient-color {
+  color: linear-gradient(var(--primary-dark), var(--primary), var(--primary-light));
+}
+
+.title{
+  @apply text-3xl font-bold
+}
+.section_title{
+  @apply text-xl font-semibold
+}
+
+
+*,::after,::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  
+  font-family: 'Quicksand', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @apply bg-slate-200 dark:bg-slate-800 text-gray-800 dark:text-white
+}
+.nav-item{
+  @apply hover:bg-slate-200 py-2 px-3 h-10 rounded-lg hover:text-primary cursor-pointer hover:border-none transition-colors delay-200
+}
+
+p{
+  @apply my-2
+}
+
+.hero-section {
+  background: linear-gradient(135deg, #FF6B6B, #6B47FF);
+  color: white; /* Set the text color to contrast with the background */
+  padding: 100px; /* Adjust padding as needed */
+  text-align: center;
+}
+
+.bgd-primary{
+  @apply bg-slate-100 dark:bg-slate-800
+}
+
+.btn-primary{
+  @apply bg-primary border text-sm border-transparent text-slate-100 py-2 px-4 rounded-md  hover:bg-transparent hover:border-primary hover:text-primary
+}
+.btn-primary-outline{
+  @apply hover:bg-primary border text-primary text-sm hover:border-transparent hover:text-slate-100 py-2 px-4 rounded-md  bg-transparent border-primary 
+}
+.btn-secondary{
+  @apply bg-final border text-sm border-transparent text-slate-100 py-2 px-4 rounded-md  hover:bg-transparent hover:border-final hover:text-final
+}
+.btn-secondary-outline{
+  @apply hover:bg-final border text-final text-sm hover:border-transparent hover:text-slate-100 py-2 px-4 rounded-md  bg-transparent border-final 
+}
+
+
+.carousel * {
+  box-sizing: border-box;
+  height: 65vh;
+  object-fit: cover;
+  border-radius: 25px;}
+
+.thumbs-wrapper, .control-dots, .legend {
+  display: none !important;
+}
+
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
