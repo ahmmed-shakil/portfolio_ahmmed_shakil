@@ -14,12 +14,12 @@ const DesktopFooter = () => {
             <div className=" grid grid-cols-1 lg:grid-cols-3 justify-between items-start">
               <div className=" flex flex-col space-y-5">
                 <h2 className="text-2xl font-semibold">
-                  <span className="text-primary">S</span>MART
+                  <span className="text-primary">Port</span>folio
                 </h2>
                 <div className=" flex items-center gap-2">
                   <MapPinIcon className=" h-5 w-5" />
                   <h4 className=" text-lg font-medium">
-                    Level-4, 34, Awal Centre, Banani, Dhaka
+                    Mymensingh, Bangladesh
                   </h4>
                 </div>
                 <div className=" flex items-center gap-2">
@@ -38,9 +38,6 @@ const DesktopFooter = () => {
                     <NavLink className=" hover:underline mx-1">
                       +88 01796282969
                     </NavLink>
-                    <span className=" text-sm">
-                      ( Available 10:00 AM - 5:00 PM )
-                    </span>
                   </h4>
                 </div>
               </div>
@@ -232,7 +229,7 @@ const DesktopFooter = () => {
             <div className=" hidden md:grid grid-cols-3 items-center justify-between">
               <p>Lisence: Demo lisence</p>
               <p className=" text-center">
-                copyright &copy; 2023. Shakil Ahmmed Joy
+                copyright &copy; 2024. Shakil Ahmmed Joy
               </p>
               <p className=" text-right">v 1.0.0</p>
             </div>
