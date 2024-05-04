@@ -10,6 +10,14 @@ const Projects = () => {
       slug: "full_stack",
     },
     {
+      title: "Frontend",
+      slug: "frontend",
+    },
+    {
+      title: "Backend",
+      slug: "backend",
+    },
+    {
       title: "Components",
       slug: "components",
     },
@@ -28,7 +36,9 @@ const Projects = () => {
         </div>
         <div className="space-y-2 md:space-y-10">
           <div>
-            <div className=" md:w-1/2 mx-auto grid grid-cols-2 md:grid-cols-3 items-center justify-center gap-2">
+            <div
+              className={`md:w-9/12 mx-auto grid grid-cols-2 md:grid-cols-${types.length} items-center justify-center gap-2`}
+            >
               {types.map((type, i) => (
                 <div
                   onClick={() => {
