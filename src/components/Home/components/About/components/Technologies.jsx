@@ -129,7 +129,7 @@ const Technologies = () => {
                   selected === skill.title
                     ? "bg-primary text-slate-200"
                     : "bg-transparent text-primary"
-                }  border py-2 flex justify-center items-center rounded-md border-primary hover:bg-primary hover:text-slate-200`}
+                }  border py-2 font-semibold flex justify-center items-center rounded-md border-primary hover:bg-primary hover:text-slate-200`}
               >
                 {skill.title}
               </div>
