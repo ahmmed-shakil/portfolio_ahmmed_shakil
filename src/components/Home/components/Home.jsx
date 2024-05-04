@@ -9,6 +9,7 @@ import { CategoryContainer } from "./Categories/CategoryContainer/CategoryContai
 import HeroSection from "./HeroSection/HeroSection";
 import About from "./About/About";
 import MobileHeader from "../../shared/MobileHeader";
+import Projects from "./Projects/Projects";
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       <div className=" space-y-4 md:space-y-20">
         <HeroSection />
         <About />
+        <Projects />
       </div>
       {/* <Features /> */}
       {/* <Ourcourses /> */}
