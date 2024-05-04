@@ -14,11 +14,9 @@ const SkillCard = ({ data }) => {
         />
       </div>
       <div className=" p-3">
-        <Typography className=" font-semibold text-lg">{data.title}</Typography>
-        <Line />
-        <div className=" mt-5">
-          <Typography className=" font-sm">{data.desc}</Typography>
-        </div>
+        <Typography className=" font-semibold text-lg text-center">
+          {data.title}
+        </Typography>
       </div>
     </div>
   );
