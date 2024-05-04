@@ -111,10 +111,12 @@ const Technologies = () => {
   const [selectedItems, setSelectedItems] = useState(skills[0].items);
 
   return (
-    <div className=" space-y-16">
+    <div className=" space-y-16 p-5">
       <div className=" flex flex-col justify-center items-center">
-        <Typography className=" section_title">My Technologies</Typography>
-        <Line />
+        <Typography className=" section_title text-slate-200">
+          My Technologies
+        </Typography>
+        <Line prop={"bg-slate-200"} />
       </div>
       <div className=" space-y-10">
         <div>
@@ -127,16 +129,16 @@ const Technologies = () => {
                 }}
                 className={` cursor-pointer ${
                   selected === skill.title
-                    ? "bg-primary text-slate-200"
-                    : "bg-transparent text-primary"
-                }  border py-2 font-semibold flex justify-center items-center rounded-md border-primary hover:bg-primary hover:text-slate-200`}
+                    ? "bg-slate-200 text-primary"
+                    : "bg-transparent text-slate-200"
+                }  border py-2 font-semibold flex justify-center items-center rounded-md border-slate-200 hover:bg-slate-200 hover:text-primary`}
               >
                 {skill.title}
               </div>
             ))}
           </div>
         </div>
-        <div>
+        <div style={{ minHeight: "60vh" }}>
           <div className=" grid grid-cols-2 md:grid-cols-4 gap-4 items-center justify-center mt-5">
             {selectedItems.map((item, index) => (
               <SkillCard key={index} data={item} />

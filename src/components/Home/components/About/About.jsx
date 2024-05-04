@@ -3,7 +3,7 @@ import { Layout } from "../../../shared/Layout/Layout";
 import Line from "../../../shared/Line";
 import Typography from "../../../shared/Typography/Typography";
 import TypewriterComponent from "typewriter-effect";
-import image from "../../../../images/HeroSection/robot-hero.jpg";
+import image from "../../../../images/About/about_img.jpg";
 import Technologies from "./components/Technologies";
 
 const About = () => {
@@ -15,12 +15,12 @@ const About = () => {
           <Line />
         </div>
 
-        <div className=" grid grid-cols-1 md:grid-cols-2 gap-10 justify-start items-start pt-10">
+        <div className=" grid grid-cols-1 md:grid-cols-2 gap-0 justify-start items-start pt-10">
           <div className=" flex justify-start">
             <img
               src={image}
               alt="portfolio_image"
-              className=" rounded-md w-11/12"
+              className=" rounded-md w-10/12 h-[350px] object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-700 ease-in-out"
             />
           </div>
           <div>
@@ -49,7 +49,7 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className=" pt-20">
+        <div className=" py-10 gradient-background rounded-md my-20">
           <Technologies />
         </div>
       </Layout>

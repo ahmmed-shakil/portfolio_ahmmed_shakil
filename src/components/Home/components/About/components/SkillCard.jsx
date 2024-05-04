@@ -6,7 +6,7 @@ const SkillCard = ({ data }) => {
   console.log("🚀 ~ SkillCard ~ data:", data);
   return (
     <div className=" cursor-pointer grid grid-cols-1 h-full bg-slate-100 dark:bg-slate-900 shadow-lg rounded-md hover:scale-95 transition-all duration-150 ease-linear">
-      <div className=" bg-primary py-5 flex justify-center items-center rounded-t-md">
+      <div className=" bg-slate-200 py-5 flex justify-center items-center rounded-t-md">
         <img
           src={data.image}
           alt={data.title}
