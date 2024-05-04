@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Typography from "../../../../shared/Typography/Typography";
 import Line from "../../../../shared/Line";
 import SkillCard from "./SkillCard";
 import img from "../../../../../images/HeroSection/lynx_in_space.png";
+import TabsDropDown from "../../../../shared/TabsDropDowns/TabsDropDown";
 const skills = [
   {
     title: "Languages",
@@ -110,6 +111,13 @@ const Technologies = () => {
   const [selected, setSelected] = useState("Languages");
   const [selectedItems, setSelectedItems] = useState(skills[0].items);
 
+  useEffect(() => {
+    const selectedItem = skills?.find((data) => data.title === selected.title);
+    console.log("🚀 ~ useEffect ~ selectedItem:", selectedItem);
+    setSelectedItems(selectedItem?.items);
+  }, [selected]);
+  console.log("🚀 ~ Technologies ~ selected:", selectedItems);
+
   return (
     <div className=" space-y-16 p-5">
       <div className=" flex flex-col justify-center items-center">
@@ -120,15 +128,15 @@ const Technologies = () => {
       </div>
       <div className="space-y-2 md:space-y-10">
         <div>
-          <div className=" grid grid-cols-2 md:grid-cols-4 items-center justify-center gap-2">
+          <div className=" hidden md:grid grid-cols-2 md:grid-cols-4 items-center justify-center gap-2">
             {skills.map((skill, i) => (
               <div
                 onClick={() => {
-                  setSelected(skill.title);
+                  setSelected(skill);
                   setSelectedItems(skill.items);
                 }}
                 className={` cursor-pointer ${
-                  selected === skill.title
+                  selected.title === skill.title
                     ? "bg-slate-200 text-primary"
                     : "bg-transparent text-slate-200"
                 }  border py-2 font-semibold flex justify-center items-center rounded-md border-slate-200 hover:bg-slate-200 hover:text-primary`}
@@ -138,9 +146,18 @@ const Technologies = () => {
             ))}
           </div>
         </div>
+        <div className=" block md:hidden relative">
+          <TabsDropDown
+            text={"Select Technology"}
+            data={skills}
+            className={" text-slate-200"}
+            expandClass={" right-0 left-0 top-17"}
+            setState={setSelected}
+          />
+        </div>
         <div style={{ minHeight: "60vh" }}>
           <div className=" grid grid-cols-2 md:grid-cols-4 gap-4 items-center justify-center mt-5">
-            {selectedItems.map((item, index) => (
+            {selectedItems?.map((item, index) => (
               <SkillCard key={index} data={item} />
             ))}
           </div>

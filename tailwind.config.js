@@ -20,6 +20,9 @@ module.exports = {
         product: "1fr 1.3fr 1fr",
         cartSummary: "3fr 1fr",
       },
+      gridRowColumns: {
+        projectCard: "2fr 3fr 1fr",
+      },
       backgroundImage: {
         heroBg: "url(/src/images/hero-bg.webp)",
       },
