@@ -3,6 +3,7 @@ export function getGreeting() {
   const now = new Date();
   // Get the current hour (0-23)
   const currentHour = now.getHours();
+  console.log("🚀 ~ getGreeting ~ currentHour:", currentHour);
   let greeting;
 
   // Determine the appropriate greeting based on the current hour

@@ -5,6 +5,7 @@ import Typography from "../../../shared/Typography/Typography";
 import TypewriterComponent from "typewriter-effect";
 import image from "../../../../images/About/about_img.jpg";
 import Technologies from "./components/Technologies";
+import ButtonPrimary from "../../../Buttons/ButtonPrimary";
 
 const About = () => {
   return (
@@ -48,6 +49,10 @@ const About = () => {
               />
             </div>
           </div>
+        </div>
+        <div className=" flex justify-center items-center gap-2 mt-10">
+          <ButtonPrimary text={"More About Me"} />
+          <ButtonPrimary text={"Download Resume"} />
         </div>
         <div className=" py-10 gradient-background rounded-md my-20">
           <Technologies />

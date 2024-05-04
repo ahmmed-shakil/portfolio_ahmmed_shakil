@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Layout } from "../../../shared/Layout/Layout";
 import ButtonPrimary from "../../../Buttons/ButtonPrimary";
 import AnalogClock from "./components/AnalogClock";
@@ -8,6 +8,14 @@ import { getGreeting } from "../../../../utils/getGreetings";
 import TypewriterComponent from "typewriter-effect";
 
 const HeroSection = () => {
+  const now = new Date();
+  // Get the current hour (0-23)
+  const currentHour = now.getHours();
+  const [message, setMessage] = useState("Greetings!");
+  useEffect(() => {
+    const text = getGreeting();
+    setMessage(text);
+  }, [currentHour]);
   return (
     <div
       style={{
@@ -23,7 +31,7 @@ const HeroSection = () => {
         <Layout>
           <div className="grid sm:grid-cols-1 md:grid-cols-2 justify-between items-center">
             <div className=" space-y-3">
-              <h6 className="text-xl text-third font-bold">{getGreeting()}</h6>
+              <h6 className="text-xl text-third font-bold">{message}</h6>
               <h2 className="text-4xl text-primary font-bold">
                 WELCOME TO THE WORLD OF CODING!
               </h2>
