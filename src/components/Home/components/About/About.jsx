@@ -13,7 +13,7 @@ const About = () => {
           <Typography className=" section_title">ABOUT ME</Typography>
           <Line />
         </div>
-        <div className=" grid grid-cols-1 md:grid-cols-2 gap-10 justify-between items-center pt-10">
+        <div className=" grid grid-cols-1 md:grid-cols-2 gap-10 justify-between items-start pt-10">
           <div>
             <Typography className=" text-md dark:text-third font-semibold mb-0 pb-0">
               Hello ! I am
@@ -39,8 +39,12 @@ const About = () => {
               />
             </div>
           </div>
-          <div className=" w-4/5">
-            <img src={image} alt="portfolio_image" className=" rounded-md" />
+          <div className=" flex justify-end">
+            <img
+              src={image}
+              alt="portfolio_image"
+              className=" rounded-md w-4/5"
+            />
           </div>
         </div>
       </Layout>

@@ -50,16 +50,13 @@ const DesktopFooter = () => {
                     <span className="text-primary">Useful Links</span>
                   </h2>
                   <NavLink className=" hover:underline text-left">
-                    Refund policy
+                    Projects
                   </NavLink>
                   <NavLink className=" hover:underline text-left">
-                    Terms and Conditions
+                    About
                   </NavLink>
                   <NavLink className=" hover:underline text-left">
-                    Privacy Policy
-                  </NavLink>
-                  <NavLink className=" hover:underline text-left">
-                    About us
+                    Blogs
                   </NavLink>
                 </div>
               </div>
@@ -230,10 +227,6 @@ const DesktopFooter = () => {
                   </div>
                 </div>
               </div>
-            </div>
-            {/* Payment options */}
-            <div>
-              <img src={paymentImg} alt="payment-options" className=" w-full" />
             </div>
             <hr className=" h-1 bg-primary w-full" />
             <div className=" hidden md:grid grid-cols-3 items-center justify-between">
