@@ -1,17 +1,13 @@
-import useClock from '../../../../../hooks/clockHooks/useClock'
-
-
+import useClock from "../../../../../hooks/clockHooks/useClock";
 
 const AnalogClock = () => {
-  const [timing] = useClock()
+  const [timing] = useClock();
 
-  const clockNumbers = Array.from({ length: 12 }, (_, i) => i + 1)
+  const clockNumbers = Array.from({ length: 12 }, (_, i) => i + 1);
 
   return (
     <div className="flex w-full cursor-pointer flex-wrap items-center justify-center gap-x-40 gap-y-0">
-
       <div className="group relative flex cursor-pointer items-center justify-center text-sm">
-
         <div
           className={`w-80 h-80 shadow-lg relative flex items-center justify-center rounded-full bg-heroBg border-solid border-2 border-primary`}
         >
@@ -37,7 +33,7 @@ const AnalogClock = () => {
             ></span>
             {/* Second hand */}
             <span
-              className={`h-[6.5em] w-[0.09em] bg-slate-800 absolute bottom-1.5 z-30 w-1 origin-bottom rounded-md`}
+              className={`h-[6.5em] w-[0.09em] bg-slate-800 absolute bottom-1.5 z-30 origin-bottom rounded-md`}
               style={timing.updateSeconds}
             ></span>
             {/* Minute hand */}
@@ -54,7 +50,7 @@ const AnalogClock = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default AnalogClock
+export default AnalogClock;

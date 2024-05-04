@@ -17,11 +17,7 @@ const HeroSection = () => {
     setMessage(text);
   }, [currentHour]);
   return (
-    <div
-      style={{
-        minHeight: "80vh",
-      }}
-    >
+    <div className=" min-h-fit">
       <div
         className=" py-20 w-full"
         style={{
@@ -56,7 +52,7 @@ const HeroSection = () => {
                 <ButtonPrimary text={"Download Resume"} />
               </div>
             </div>
-            <div className=" flex">
+            <div className=" hidden md:flex">
               <AnalogClock />
               <img src={spaceImg} alt="hero_img" className="h-[100px]" />
             </div>

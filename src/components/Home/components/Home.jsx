@@ -8,12 +8,14 @@ import { HomeProducts } from "./HomeProducts/HomeProducts";
 import { CategoryContainer } from "./Categories/CategoryContainer/CategoryContainer";
 import HeroSection from "./HeroSection/HeroSection";
 import About from "./About/About";
+import MobileHeader from "../../shared/MobileHeader";
 
 const Home = () => {
   return (
     <div>
       <DesktopHeader />
-      <div className=" space-y-20">
+      <MobileHeader />
+      <div className=" space-y-4 md:space-y-20">
         <HeroSection />
         <About />
       </div>

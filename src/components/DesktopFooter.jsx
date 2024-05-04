@@ -6,11 +6,11 @@ import paymentImg from "../images/payments.f8a603e8.png";
 
 const DesktopFooter = () => {
   return (
-    <div className="  lg:mt-56">
+    <div className="  md:mt-56">
       <hr className=" h-1 bg-primary w-full" />
       <div className=" bg-secondary text-slate-200">
         <Layout>
-          <div className=" space-y-5 pt-24">
+          <div className=" space-y-5 pt-5 md:pt-24">
             <div className=" grid grid-cols-1 lg:grid-cols-3 justify-between items-start">
               <div className=" flex flex-col space-y-5">
                 <h2 className="text-2xl font-semibold">
@@ -41,7 +41,7 @@ const DesktopFooter = () => {
                   </h4>
                 </div>
               </div>
-              <div className=" flex justify-start lg:justify-center ">
+              <div className=" flex justify-start md:justify-center py-10 md:py-0 ">
                 <div className=" flex flex-col space-y-3">
                   <h2 className="text-xl font-semibold text-left">
                     <span className="text-primary">Useful Links</span>

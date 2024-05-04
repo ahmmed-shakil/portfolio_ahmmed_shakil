@@ -118,9 +118,9 @@ const Technologies = () => {
         </Typography>
         <Line prop={"bg-slate-200"} />
       </div>
-      <div className=" space-y-10">
+      <div className="space-y-2 md:space-y-10">
         <div>
-          <div className=" grid grid-cols-4 items-center justify-center gap-2">
+          <div className=" grid grid-cols-2 md:grid-cols-4 items-center justify-center gap-2">
             {skills.map((skill, i) => (
               <div
                 onClick={() => {
