@@ -28,7 +28,7 @@ const HeroSection = () => {
           <div className="grid sm:grid-cols-1 md:grid-cols-2 justify-between items-center">
             <div className=" space-y-3">
               <h6 className="text-xl text-third font-bold">{message}</h6>
-              <h2 className="text-4xl text-primary font-bold">
+              <h2 className="text-2xl md:text-4xl text-primary font-bold">
                 WELCOME TO THE WORLD OF CODING!
               </h2>
               <div className=" text-third text-xl py-8">
