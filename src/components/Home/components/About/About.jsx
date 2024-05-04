@@ -4,6 +4,7 @@ import Line from "../../../shared/Line";
 import Typography from "../../../shared/Typography/Typography";
 import TypewriterComponent from "typewriter-effect";
 import image from "../../../../images/HeroSection/robot-hero.jpg";
+import Technologies from "./components/Technologies";
 
 const About = () => {
   return (
@@ -13,7 +14,15 @@ const About = () => {
           <Typography className=" section_title">ABOUT ME</Typography>
           <Line />
         </div>
-        <div className=" grid grid-cols-1 md:grid-cols-2 gap-10 justify-between items-start pt-10">
+
+        <div className=" grid grid-cols-1 md:grid-cols-2 gap-10 justify-start items-start pt-10">
+          <div className=" flex justify-start">
+            <img
+              src={image}
+              alt="portfolio_image"
+              className=" rounded-md w-11/12"
+            />
+          </div>
           <div>
             <Typography className=" text-md dark:text-third font-semibold mb-0 pb-0">
               Hello ! I am
@@ -39,13 +48,9 @@ const About = () => {
               />
             </div>
           </div>
-          <div className=" flex justify-end">
-            <img
-              src={image}
-              alt="portfolio_image"
-              className=" rounded-md w-4/5"
-            />
-          </div>
+        </div>
+        <div className=" pt-20">
+          <Technologies />
         </div>
       </Layout>
     </div>
