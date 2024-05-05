@@ -64,12 +64,22 @@ const skills = [
         image: img,
       },
       {
+        title: "Mongoose",
+        desc: "Working with MongoDB for flexible, high-performance NoSQL database management.",
+        image: img,
+      },
+      {
         title: "Prisma",
         desc: "Using Prisma as an ORM for efficient data modeling and management in backend systems.",
         image: img,
       },
       {
         title: "PostgreSQL",
+        desc: "Handling complex data storage and queries using PostgreSQL, a powerful relational database.",
+        image: img,
+      },
+      {
+        title: "Supabase",
         desc: "Handling complex data storage and queries using PostgreSQL, a powerful relational database.",
         image: img,
       },
@@ -100,6 +110,26 @@ const skills = [
       },
       {
         title: "Git",
+        desc: "Version control expertise using Git for tracking changes and collaborating efficiently.",
+        image: img,
+      },
+      {
+        title: "NextAuth",
+        desc: "Version control expertise using Git for tracking changes and collaborating efficiently.",
+        image: img,
+      },
+      {
+        title: "Firebase",
+        desc: "Version control expertise using Git for tracking changes and collaborating efficiently.",
+        image: img,
+      },
+      {
+        title: "Passport Js",
+        desc: "Version control expertise using Git for tracking changes and collaborating efficiently.",
+        image: img,
+      },
+      {
+        title: "Nodemailer",
         desc: "Version control expertise using Git for tracking changes and collaborating efficiently.",
         image: img,
       },

@@ -11,6 +11,7 @@ import {
   ShoppingCartIcon,
   UserCircleIcon,
 } from "@heroicons/react/24/solid";
+import TextScroller from "./TextScroller/TextScroller";
 
 const DesktopHeader = () => {
   const { pathname } = useLocation();
@@ -43,10 +44,14 @@ const DesktopHeader = () => {
     }, 2000);
   }, [phoneCopied]);
   return (
-    <div
-      className="hidden md:block sticky bg-slate-800 text-slate-200 top-0 shadow"
-      style={{ zIndex: 2 }}
-    >
+    <div className="hidden md:block sticky bg-slate-800 text-slate-200 top-0 shadow z-50">
+      <div className=" py-2 bg-primary">
+        <TextScroller
+          text={
+            "I am an ambitious, self-motivated, quick learner and able to work with minimum supervision under tight schedules with an aptitude for learning new technology. "
+          }
+        />
+      </div>
       <Layout>
         <div className=" flex items-center gap-10">
           <div className=" flex items-center pt-1 mb-2">
