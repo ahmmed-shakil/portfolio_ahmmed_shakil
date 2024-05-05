@@ -35,19 +35,20 @@ const HeroSection = () => {
                 <TypewriterComponent
                   options={{
                     strings: [
-                      "HTML, CSS, Javascript, Typescript",
+                      "HTML, CSS, JavaScript, TypeScript",
                       "React, Next Js, Redux",
-                      "Node js, Express, MongoDB, Mongoose, PostgreSQL, Prisma",
+                      "Node Js, Express, MongoDB, Mongoose, PostgreSQL",
+                      "Prisma, Supabase",
                       "AWS, Docker, Docker Compose, CI/CD, Nginx",
                       "Jest, Supertest",
-                      "GraphQL",
+                      "GraphQL, NextAuth, Firebase, Passport Js, Nodemailer",
                     ],
                     autoStart: true,
                     loop: true,
                   }}
                 />
               </div>
-              <div className=" flex justify-start items-center gap-2">
+              <div className=" flex justify-start items-center gap-2 mt-0">
                 <ButtonPrimary text={"View Projects"} />
                 <ButtonPrimary text={"Download Resume"} />
               </div>

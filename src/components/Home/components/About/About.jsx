@@ -20,7 +20,7 @@ const About = () => {
           <img
             src={image}
             alt="portfolio_image"
-            className=" rounded-md w-full md:w-10/12 h-[350px] object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-700 ease-in-out"
+            className=" rounded-md w-full md:w-10/12 h-[350px] object-cover grayscale hover:grayscale-0 hover:scale-95 transition-all duration-700 ease-in-out"
           />
         </div>
         <div>
@@ -41,9 +41,11 @@ const About = () => {
               options={{
                 strings: [
                   `I am an ambitious, self-motivated, quick learner and able to work with minimum supervision under tight schedules with an aptitude for learning new technology. I excel in high-pressure environments, consistently delivering quality results on time. My commitment to continuous improvement drives my desire to stay current with industry trends and advancements.`,
+                  "I have graudated from Shahjalal University of Science and Technology in Geography and Environment in 2021. Currently working as a Software Developer in a company since May, 2021",
                 ],
                 autoStart: true,
                 loop: true,
+                deleteSpeed: "natural",
               }}
             />
           </div>

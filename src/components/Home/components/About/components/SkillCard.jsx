@@ -10,7 +10,7 @@ const SkillCard = ({ data }) => {
         <img
           src={data.image}
           alt={data.title}
-          className=" w-24 h-24 rounded-full"
+          className=" w-24 h-24 rounded-full object-contain"
         />
       </div>
       <div className=" p-3">

@@ -4,6 +4,15 @@ import Line from "../../../../shared/Line";
 import SkillCard from "./SkillCard";
 import img from "../../../../../images/HeroSection/lynx_in_space.png";
 import TabsDropDown from "../../../../shared/TabsDropDowns/TabsDropDown";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import reactImg from "../../../../../images/Techs/react.svg";
+import jsImg from "../../../../../images/Techs/js.webp";
+import tsImg from "../../../../../images/Techs/ts.png";
+import nextImg from "../../../../../images/Techs/next.avif";
+import reduxImg from "../../../../../images/Techs/redux-2.png";
+import tailwindImg from "../../../../../images/Techs/tailwind.png";
 const skills = [
   {
     title: "Languages",
@@ -11,12 +20,12 @@ const skills = [
       {
         title: "JavaScript",
         desc: "Proficient in writing clean, efficient code for both front-end and back-end development.",
-        image: img,
+        image: jsImg,
       },
       {
         title: "TypeScript",
         desc: "Experience using TypeScript to build scalable and maintainable applications.",
-        image: img,
+        image: tsImg,
       },
     ],
   },
@@ -26,22 +35,22 @@ const skills = [
       {
         title: "React",
         desc: "Developing dynamic and interactive user interfaces using React and related libraries.",
-        image: img,
+        image: reactImg,
       },
       {
         title: "Next.js",
         desc: "Building server-rendered React applications with Next.js for enhanced performance and SEO.",
-        image: img,
+        image: nextImg,
       },
       {
         title: "Redux",
         desc: "Managing state effectively in complex applications with Redux and its related tools.",
-        image: img,
+        image: reduxImg,
       },
       {
         title: "Tailwind CSS",
         desc: "Using Tailwind CSS to rapidly build modern, responsive UIs with a utility-first approach.",
-        image: img,
+        image: tailwindImg,
       },
       {
         title: "Material UI",
@@ -65,6 +74,11 @@ const skills = [
       },
       {
         title: "Mongoose",
+        desc: "Working with MongoDB for flexible, high-performance NoSQL database management.",
+        image: img,
+      },
+      {
+        title: "Express",
         desc: "Working with MongoDB for flexible, high-performance NoSQL database management.",
         image: img,
       },
@@ -148,11 +162,46 @@ const Technologies = () => {
   }, [selected]);
   console.log("🚀 ~ Technologies ~ selected:", selectedItems);
 
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
   return (
-    <div className=" space-y-16 p-5">
+    <div className=" space-y-16 px-5 pt-0">
       <div className=" flex flex-col justify-center items-center">
         <Typography className=" section_title text-slate-200">
-          My Technologies
+          TECHNOLOGIES
         </Typography>
         <Line prop={"bg-slate-200"} />
       </div>
@@ -176,7 +225,7 @@ const Technologies = () => {
             ))}
           </div>
         </div>
-        <div className=" block md:hidden relative">
+        <div className=" block md:hidden relative z-50">
           <TabsDropDown
             text={"Select Technology"}
             data={skills}
@@ -185,12 +234,18 @@ const Technologies = () => {
             setState={setSelected}
           />
         </div>
-        <div style={{ minHeight: "60vh" }}>
-          <div className=" grid grid-cols-2 md:grid-cols-4 gap-4 items-center justify-center mt-5">
-            {selectedItems?.map((item, index) => (
-              <SkillCard key={index} data={item} />
-            ))}
-          </div>
+        <div style={{ minHeight: "20vh" }} className=" pt-5 md:pt-0 px-3">
+          {selectedItems?.length && (
+            <div className="slider-container">
+              <Slider {...settings}>
+                {/* <div className=" grid grid-cols-2 md:grid-cols-6 gap-4 items-center justify-center mt-5"> */}
+                {selectedItems?.map((item, index) => (
+                  <SkillCard key={index} data={item} />
+                ))}
+                {/* </div> */}
+              </Slider>
+            </div>
+          )}
         </div>
       </div>
     </div>

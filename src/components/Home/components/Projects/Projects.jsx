@@ -236,7 +236,7 @@ const Projects = () => {
     <div>
       <Layout>
         <div className=" flex flex-col justify-center items-center mb-10">
-          <Typography className=" section_title">My Projects</Typography>
+          <Typography className=" section_title">PROJECTS</Typography>
           <Line />
         </div>
         <div className="space-y-2 md:space-y-10">
@@ -260,7 +260,7 @@ const Projects = () => {
                 </div>
               ))}
             </div>
-            <div className=" block md:hidden relative">
+            <div className=" block md:hidden relative z-50">
               <TabsDropDown
                 className=" border-primary"
                 data={types}

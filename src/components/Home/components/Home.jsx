@@ -10,6 +10,7 @@ import HeroSection from "./HeroSection/HeroSection";
 import About from "./About/About";
 import MobileHeader from "../../shared/MobileHeader";
 import Projects from "./Projects/Projects";
+import Education from "./Education/Education";
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
         <HeroSection />
         <About />
         <Projects />
+        <Education />
       </div>
       {/* <Features /> */}
       {/* <Ourcourses /> */}
