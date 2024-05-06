@@ -13,6 +13,23 @@ import tsImg from "../../../../../images/Techs/ts.png";
 import nextImg from "../../../../../images/Techs/next.avif";
 import reduxImg from "../../../../../images/Techs/redux-2.png";
 import tailwindImg from "../../../../../images/Techs/tailwind.png";
+import muiImg from "../../../../../images/Techs/mui.webp";
+import bsImg from "../../../../../images/Techs/bs.jpg";
+import mongodbImg from "../../../../../images/Techs/mongodb.webp";
+import mongooseImg from "../../../../../images/Techs/mongoose.png";
+import expressImg from "../../../../../images/Techs/express.png";
+import prismaImg from "../../../../../images/Techs/prisma.png";
+import psqlImg from "../../../../../images/Techs/postgeesql.png";
+import supabaseImg from "../../../../../images/Techs/supabase.jpeg";
+import awsImg from "../../../../../images/Techs/aws.png";
+import dockerImg from "../../../../../images/Techs/docker.svg";
+import cicdImg from "../../../../../images/Techs/cicd.png";
+import gitImg from "../../../../../images/Techs/git.webp";
+import nextauthImg from "../../../../../images/Techs/nextauth.png";
+import firebaseImg from "../../../../../images/Techs/firebase.png";
+import passportImg from "../../../../../images/Techs/passport.png";
+import nodemailerImg from "../../../../../images/Techs/nodemailer.svg";
+import nodeImg from "../../../../../images/Techs/nodejs.png";
 const skills = [
   {
     title: "Languages",
@@ -55,12 +72,12 @@ const skills = [
       {
         title: "Material UI",
         desc: "Utilizing Material UI components to create intuitive and consistent design patterns in applications.",
-        image: img,
+        image: muiImg,
       },
       {
         title: "Bootstrap",
         desc: "Leveraging Bootstrap for fast prototyping and responsive design with minimal effort.",
-        image: img,
+        image: bsImg,
       },
     ],
   },
@@ -68,34 +85,39 @@ const skills = [
     title: "Backend",
     items: [
       {
+        title: "Node.js",
+        desc: "Working with MongoDB for flexible, high-performance NoSQL database management.",
+        image: nodeImg,
+      },
+      {
         title: "MongoDB",
         desc: "Working with MongoDB for flexible, high-performance NoSQL database management.",
-        image: img,
+        image: mongodbImg,
       },
       {
         title: "Mongoose",
         desc: "Working with MongoDB for flexible, high-performance NoSQL database management.",
-        image: img,
+        image: mongooseImg,
       },
       {
         title: "Express",
         desc: "Working with MongoDB for flexible, high-performance NoSQL database management.",
-        image: img,
+        image: expressImg,
       },
       {
         title: "Prisma",
         desc: "Using Prisma as an ORM for efficient data modeling and management in backend systems.",
-        image: img,
+        image: prismaImg,
       },
       {
         title: "PostgreSQL",
         desc: "Handling complex data storage and queries using PostgreSQL, a powerful relational database.",
-        image: img,
+        image: psqlImg,
       },
       {
         title: "Supabase",
         desc: "Handling complex data storage and queries using PostgreSQL, a powerful relational database.",
-        image: img,
+        image: supabaseImg,
       },
     ],
   },
@@ -105,47 +127,42 @@ const skills = [
       {
         title: "AWS",
         desc: "Leveraging AWS cloud services for scalable, reliable application deployment and management.",
-        image: img,
+        image: awsImg,
       },
       {
         title: "Docker",
         desc: "Containerizing applications with Docker for consistent and efficient deployment across environments.",
-        image: img,
-      },
-      {
-        title: "Docker Compose",
-        desc: "Utilizing Docker Compose to manage multi-container Docker applications effectively.",
-        image: img,
+        image: dockerImg,
       },
       {
         title: "CI/CD",
         desc: "Implementing CI/CD pipelines for automated testing, building, and deployment of applications.",
-        image: img,
+        image: cicdImg,
       },
       {
         title: "Git",
         desc: "Version control expertise using Git for tracking changes and collaborating efficiently.",
-        image: img,
+        image: gitImg,
       },
       {
         title: "NextAuth",
         desc: "Version control expertise using Git for tracking changes and collaborating efficiently.",
-        image: img,
+        image: nextauthImg,
       },
       {
         title: "Firebase",
         desc: "Version control expertise using Git for tracking changes and collaborating efficiently.",
-        image: img,
+        image: firebaseImg,
       },
       {
         title: "Passport Js",
         desc: "Version control expertise using Git for tracking changes and collaborating efficiently.",
-        image: img,
+        image: passportImg,
       },
       {
         title: "Nodemailer",
         desc: "Version control expertise using Git for tracking changes and collaborating efficiently.",
-        image: img,
+        image: nodemailerImg,
       },
     ],
   },
