@@ -11,6 +11,7 @@ import About from "./About/About";
 import MobileHeader from "../../shared/MobileHeader";
 import Projects from "./Projects/Projects";
 import Education from "./Education/Education";
+import Blogs from "./Blogs/Blogs";
 
 const Home = () => {
   return (
@@ -22,6 +23,7 @@ const Home = () => {
         <About />
         <Projects />
         <Education />
+        <Blogs />
       </div>
       {/* <Features /> */}
       {/* <Ourcourses /> */}

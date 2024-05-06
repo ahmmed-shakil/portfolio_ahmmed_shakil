@@ -15,6 +15,7 @@ module.exports = {
         header: "1fr 1fr",
         sixtyForty: "2fr 1fr",
         admin: "1fr 4fr",
+        background: "1fr 5fr",
         cart: "2.8fr 1fr",
         cartCard: "4fr 1fr 1fr",
         product: "1fr 1.3fr 1fr",
