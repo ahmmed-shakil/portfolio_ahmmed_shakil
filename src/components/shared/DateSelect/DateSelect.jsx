@@ -25,7 +25,7 @@ const DateSelect = () => {
     <div className=" relative">
       <div
         onClick={() => setShowDates(!showDates)}
-        className=" rounded-md h-14 px-3 text-lg w-full border-solid border-2 text-gray-800  border-gray-200 bg-slate-50 flex items-center justify-between cursor-pointer opacity-75"
+        className=" rounded-md h-12 px-3 text-md w-full border-solid border-2 text-gray-800  border-gray-200 bg-slate-50 flex items-center justify-between cursor-pointer opacity-75"
       >
         <p>
           {!selectedDate
@@ -40,7 +40,7 @@ const DateSelect = () => {
       </div>
       {showDates && (
         <div
-          className=" shadow-lg rounded-md p-3 flex items-center justify-center flex-col gap-4 absolute top-16 left-0 right-0 z-50 bg-gray-200 dark:bg-gray-800"
+          className=" shadow-lg rounded-md p-3 flex items-center justify-center flex-col gap-4 absolute top-16 left-0 right-0 z-20 bg-gray-200 dark:bg-gray-800"
           id="date"
           onClick={(e) => {
             if (e.target.id !== "date") {
@@ -54,7 +54,7 @@ const DateSelect = () => {
                 setSelectedDate(day);
                 setShowDates(false);
               }}
-              className=" hover:bg-gray-400 w-full py-2 rounded-md text-center transition-all duration-200 delay-100 ease-in-out cursor-pointer"
+              className=" hover:bg-gray-100 w-full py-2 rounded-md text-center transition-all duration-200 delay-100 ease-in-out cursor-pointer"
               key={i}
             >
               {moment(day).format("DD MMMM, YYYY")}

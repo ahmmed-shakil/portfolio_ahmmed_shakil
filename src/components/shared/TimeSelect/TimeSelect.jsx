@@ -6,7 +6,7 @@ const TimeSelect = () => {
   const [selectedDate, setSelectedDate] = useState(null);
   const [show, setShow] = useState(false);
   const startTime = moment("09:00 AM", "hh:mm A");
-  const endTime = moment("05:00 PM", "hh:mm A");
+  const endTime = moment("10:00 PM", "hh:mm A");
   const interval = 60; // 60 minutes
 
   const generateTimeSlots = () => {
@@ -27,7 +27,7 @@ const TimeSelect = () => {
     <div className="relative">
       <div
         onClick={() => setShow(!show)}
-        className="rounded-md h-14 px-3 text-lg w-full border-solid border-2 text-gray-800  border-gray-200 bg-slate-50 flex items-center justify-between cursor-pointer opacity-75"
+        className="rounded-md h-12 px-3 text-md w-full border-solid border-2 text-gray-800  border-gray-200 bg-slate-50 flex items-center justify-between cursor-pointer opacity-75"
       >
         <p>{!selectedDate ? "Select Time" : selectedDate.format("hh:mm A")}</p>
         {!show ? (
@@ -45,7 +45,7 @@ const TimeSelect = () => {
                   setSelectedDate(time);
                   setShow(false);
                 }}
-                className="hover:bg-gray-400 w-full py-2 rounded-md text-center transition-all duration-200 delay-100 ease-in-out cursor-pointer"
+                className="hover:bg-gray-100 w-full py-2 rounded-md text-center transition-all duration-200 delay-100 ease-in-out cursor-pointer"
                 key={i}
               >
                 {time.format("hh:mm A")}

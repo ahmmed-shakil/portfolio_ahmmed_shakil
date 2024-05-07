@@ -6,10 +6,10 @@ const PhoneInputComponent = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
   return (
     <PhoneInput
-      inputStyle={{ height: "50px", width: "100%" }}
-      country={"us"}
+      inputStyle={{ height: "45px", width: "100%" }}
+      country={"bd"}
       value={phoneNumber}
-      onChange={(phone) => setPhoneNumber({ phone })}
+      onChange={(phone) => setPhoneNumber(phone)}
     />
   );
 };
