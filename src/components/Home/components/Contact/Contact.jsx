@@ -19,7 +19,7 @@ const Contact = () => {
           </div>
           <div className=" mx-0 lg:mx-3 grid grid-cols-1 md:grid-cols-2 gap-10 justify-center items-center">
             <div className=" flex flex-col justify-end space-y-6 px-1 md:px-5">
-              <div className=" flex justify-center items-center">
+              {/* <div className=" flex justify-center items-center">
                 <img
                   src={image}
                   alt="Profile"
@@ -27,7 +27,7 @@ const Contact = () => {
                   width={150}
                   className=" rounded-full object-cover"
                 />
-              </div>
+              </div> */}
               <SocialMedia />
               <div className=" flex justify-center items-center flex-col">
                 <Typography className=" title">SHAKIL AHMMED JOY</Typography>
@@ -48,7 +48,7 @@ const Contact = () => {
                 projects, I'm dedicated to ensuring your success.
               </p>
             </div>
-            <div>
+            <div className=" p-1">
               <div className=" flex items-center justify-center">
                 <div className=" w-full space-y-5 lg:w-3/4 bg-slate-100 dark:bg-slate-800 text-primary p-3 rounded-md shadow-lg">
                   <h4

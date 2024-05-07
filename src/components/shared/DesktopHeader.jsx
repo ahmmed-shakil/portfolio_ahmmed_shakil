@@ -46,7 +46,10 @@ const DesktopHeader = () => {
     }, 2000);
   }, [phoneCopied]);
   return (
-    <div className="hidden md:block sticky bg-slate-800 text-slate-200 top-0 shadow z-50">
+    <div
+      className="hidden md:block sticky bg-slate-800 text-slate-200 top-0 shadow"
+      style={{ zIndex: 999 }}
+    >
       <div className=" py-2 bg-primary">
         <TextScroller
           text={
