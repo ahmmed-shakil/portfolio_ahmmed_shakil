@@ -25,7 +25,7 @@ const Education = () => {
               <ProfileCard />
             </div>
             <div className="space-y-2 md:space-y-10 text-third">
-              <div className=" grid grid-cols-background w-full mx-auto items-start">
+              <div className=" grid grid-cols-background gap-2 md:gap-0 w-full mx-auto items-start">
                 {/* <div className=" flex justify-center gap-3 items-center"> */}
                 <BuildingLibraryIcon height={28} width={28} />
                 {/* </div> */}
@@ -40,7 +40,7 @@ const Education = () => {
                   </div>
                 </div>
               </div>
-              <div className=" grid grid-cols-background w-full mx-auto items-start">
+              <div className=" grid grid-cols-background gap-2 md:gap-0 w-full mx-auto items-start">
                 {/* <div className=" flex justify-center gap-3 items-center"> */}
                 <BuildingLibraryIcon height={28} width={28} />
                 {/* </div> */}
@@ -55,7 +55,7 @@ const Education = () => {
                   </div>
                 </div>
               </div>
-              <div className=" grid grid-cols-background w-full  mx-auto items-start">
+              <div className=" grid grid-cols-background gap-2 md:gap-0 w-full  mx-auto items-start">
                 {/* <div className=" flex justify-center gap-3 items-center"> */}
                 <BuildingLibraryIcon height={28} width={28} />
                 {/* </div> */}
@@ -76,7 +76,7 @@ const Education = () => {
                   </div>
                 </div>
               </div>
-              <div className=" grid grid-cols-background w-full  mx-auto items-start">
+              <div className=" grid grid-cols-background gap-2 md:gap-0 w-full  mx-auto items-start">
                 {/* <div className=" flex justify-center gap-3 items-center"> */}
                 <CodeBracketIcon height={28} width={28} />
                 {/* </div> */}
@@ -95,7 +95,7 @@ const Education = () => {
                   </div>
                 </div>
               </div>
-              <div className=" grid grid-cols-background w-full mx-auto items-start">
+              <div className=" grid grid-cols-background gap-2 md:gap-0 w-full mx-auto items-start">
                 {/* <div className=" flex justify-center gap-3 items-center"> */}
                 <CodeBracketIcon height={28} width={28} />
                 {/* </div> */}
@@ -131,7 +131,7 @@ const Education = () => {
                   <Line prop={"bg-third"} />
                 </div>
               </div>
-              <div className=" grid grid-cols-background w-full mx-auto items-start">
+              <div className=" grid grid-cols-background gap-2 md:gap-0 w-full mx-auto items-start">
                 {/* <div className=" flex justify-center gap-3 items-center"> */}
                 <BuildingOfficeIcon height={28} width={28} />
                 {/* </div> */}

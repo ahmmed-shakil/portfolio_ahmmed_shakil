@@ -6,10 +6,29 @@ import { XMarkIcon } from "@heroicons/react/24/solid";
 import Switcher from "../../DarkModeSwitch/Switcher";
 import { pages } from "../../routers";
 import { scrollToTop } from "../../utils/scrollToTop";
+import { useSpring, animated } from "react-spring";
 
 const MobileHeader = () => {
   const [show, setShow] = useState(false);
   const mobileMenuRef = useRef(null);
+
+  // Define the slide-in animation using useSpring for the hover content
+  const slideInLeft = useSpring({
+    from: {
+      transform: "translateX(100%)", // Initial state (hidden, off-screen to the right)
+    },
+    to: {
+      transform: show ? "translateX(0)" : "translateX(100%)", // Target state based on `show` state
+    },
+    config: { tension: 150, friction: 30 },
+  });
+
+  // Define the slide-down animation using useSpring for the image div
+  const slideOut = useSpring({
+    opacity: show ? 0 : 1,
+    transform: show ? "translateX(-100%)" : "translateX(0)",
+    config: { tension: 150, friction: 30 },
+  });
 
   // Add an event listener to detect clicks outside the mobile menu
   useEffect(() => {
@@ -30,7 +49,10 @@ const MobileHeader = () => {
   }, []);
 
   return (
-    <div className=" block sticky top-0 md:hidden shadow-md z-10">
+    <div
+      className=" block sticky top-0 md:hidden shadow-md"
+      style={{ zIndex: 999 }}
+    >
       <div className=" bg-slate-800 flex justify-between p-4 items-center">
         <Typography className=" text-2xl text-slate-200 font-semibold">
           <span className=" text-primary">Port</span>folio
@@ -49,7 +71,7 @@ const MobileHeader = () => {
         </div>
       </div>
       {show && (
-        <div
+        <animated.div
           className=" bg-slate-800 text-slate-200 z-50 p-4 transition-all duration-1000 ease-in-out"
           ref={mobileMenuRef}
           style={{
@@ -58,6 +80,7 @@ const MobileHeader = () => {
             width: "300px",
             position: "absolute",
             transition: "right 1s ease-in-out", // Add transition property to style
+            ...slideInLeft,
           }}
         >
           <div className="flex flex-col items-start space-y-2">
@@ -109,7 +132,7 @@ const MobileHeader = () => {
                 );
               })}
           </div>
-        </div>
+        </animated.div>
       )}
     </div>
   );

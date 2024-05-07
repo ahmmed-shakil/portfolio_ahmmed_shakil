@@ -39,7 +39,7 @@ const TabsDropDown = ({ className, data, text, expandClass, setState }) => {
     <Layout>
       <div
         onClick={() => setIsOpen(!isOpen)}
-        className={` rounded-md border p-2 flex justify-evenly items-center ${className}`}
+        className={` rounded-md border p-2 h-12 flex justify-evenly items-center ${className}`}
       >
         <Typography className=" font-semibold text-xl">
           {selectedItem ? selectedItem.title : text}
