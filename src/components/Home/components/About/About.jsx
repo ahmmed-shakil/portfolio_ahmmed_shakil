@@ -6,6 +6,7 @@ import TypewriterComponent from "typewriter-effect";
 import image from "../../../../images/About/about_img.jpg";
 import Technologies from "./components/Technologies";
 import ButtonPrimary from "../../../Buttons/ButtonPrimary";
+import { HashLink as NavLink } from "react-router-hash-link";
 
 const About = () => {
   return (
@@ -52,7 +53,18 @@ const About = () => {
         </div>
       </div>
       <div className=" flex justify-center items-center gap-2 mt-10">
-        <ButtonPrimary text={"More About Me"} />
+        <NavLink
+          className="bg-primary text-gray-200 px-3 py-2 rounded-md mt-4 transition-all delay-200 shadow hover:shadow-lg hover:bg-transparent border-transparent border-solid border-2 hover:border-primary hover:text-primary hover:scale-105"
+          to={"/#background"}
+          scroll={(el) =>
+            el.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            })
+          }
+        >
+          Learn More About Me
+        </NavLink>
         <ButtonPrimary text={"Download Resume"} />
       </div>
       <div className=" py-10 gradient-background rounded-md my-20">

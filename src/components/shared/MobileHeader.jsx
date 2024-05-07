@@ -1,9 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
-import { NavLink } from "react-router-dom";
+import { HashLink as NavLink } from "react-router-hash-link";
 import Typography from "./Typography/Typography";
 import { Bars3BottomRightIcon } from "@heroicons/react/20/solid";
 import { XMarkIcon } from "@heroicons/react/24/solid";
 import Switcher from "../../DarkModeSwitch/Switcher";
+import { pages } from "../../routers";
+import { scrollToTop } from "../../utils/scrollToTop";
 
 const MobileHeader = () => {
   const [show, setShow] = useState(false);
@@ -58,7 +60,55 @@ const MobileHeader = () => {
             transition: "right 1s ease-in-out", // Add transition property to style
           }}
         >
-          <div></div>
+          <div className="flex flex-col items-start space-y-2">
+            {pages
+              ?.filter((page) => page.show)
+              .map((page) => {
+                const isHashLink = page.path.startsWith("/#");
+
+                return isHashLink ? (
+                  <NavLink
+                    key={page.value}
+                    smooth
+                    to={page.path}
+                    scroll={(el) =>
+                      el.scrollIntoView({
+                        behavior: "smooth",
+                        block: "center",
+                      })
+                    }
+                    className={`nav-item ${
+                      `/${window.location.hash}` === page.path &&
+                      "bg-primary text-slate-50 w-full"
+                    }`}
+                    onClick={() => setShow(false)}
+                  >
+                    {page.value}
+                  </NavLink>
+                ) : (
+                  <NavLink
+                    key={page.value}
+                    onClick={() => {
+                      scrollToTop();
+                      setShow(false);
+                    }}
+                    to={page.path}
+                    scroll={(el) =>
+                      el.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                      })
+                    }
+                    className={`nav-item ${
+                      `/${window.location.hash}` === "/" &&
+                      "bg-primary text-white w-full"
+                    }`}
+                  >
+                    {page.value}
+                  </NavLink>
+                );
+              })}
+          </div>
         </div>
       )}
     </div>

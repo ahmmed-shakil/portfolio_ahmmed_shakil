@@ -12,18 +12,32 @@ import MobileHeader from "../../shared/MobileHeader";
 import Projects from "./Projects/Projects";
 import Education from "./Education/Education";
 import Blogs from "./Blogs/Blogs";
+import Contact from "./Contact/Contact";
 
 const Home = () => {
   return (
     <div>
       <DesktopHeader />
       <MobileHeader />
-      <div className=" space-y-4 md:space-y-20">
-        <HeroSection />
-        <About />
-        <Projects />
-        <Education />
-        <Blogs />
+      <div>
+        <div>
+          <HeroSection />
+        </div>
+        <div id="about" className="pt-0 md:pt-40">
+          <About />
+        </div>
+        <div id="projects" className=" pt-0 md:pt-40">
+          <Projects />
+        </div>
+        <div id="background" className=" pt-0 md:pt-40">
+          <Education />
+        </div>
+        <div id="blogs" className=" pt-0 md:pt-36">
+          <Blogs />
+        </div>
+        <div id="contact" className=" pt-0 md:pt-40">
+          <Contact />
+        </div>
       </div>
       {/* <Features /> */}
       {/* <Ourcourses /> */}

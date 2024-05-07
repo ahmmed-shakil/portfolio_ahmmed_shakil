@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Switcher from "../../DarkModeSwitch/Switcher";
 import { pages } from "../../routers";
-import { NavLink, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { HashLink as NavLink } from "react-router-hash-link";
 import { Layout } from "./Layout/Layout";
 import {
   ClipboardDocumentCheckIcon,
@@ -12,6 +13,7 @@ import {
   UserCircleIcon,
 } from "@heroicons/react/24/solid";
 import TextScroller from "./TextScroller/TextScroller";
+import { scrollToTop } from "../../utils/scrollToTop";
 
 const DesktopHeader = () => {
   const { pathname } = useLocation();
@@ -121,9 +123,47 @@ const DesktopHeader = () => {
             </NavLink>
           </div>
           <div className="flex items-center justify-end space-x-4">
-            <div className=" py-2 px-3 h-10">
-              <Switcher />
-            </div>
+            {pages
+              ?.filter((page) => page.show)
+              .map((page) => {
+                // Check if it's a hash link or a regular link
+                const isHashLink = page.path.startsWith("/#");
+                console.log("path", pathname, page.path, window.location.hash);
+
+                return isHashLink ? (
+                  <NavLink
+                    smooth
+                    to={page.path}
+                    scroll={(el) =>
+                      el.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                      })
+                    }
+                    className={`nav-item ${
+                      `/${window.location.hash}` === page.path &&
+                      "bg-primary text-white"
+                    }`}
+                  >
+                    {page.value}
+                  </NavLink>
+                ) : (
+                  <NavLink
+                    onClick={scrollToTop}
+                    to={page.path}
+                    scroll={(el) =>
+                      el.scrollIntoView({ behavior: "smooth", block: "start" })
+                    }
+                    className={`nav-item ${
+                      `/${window.location.hash}` === "/" &&
+                      "bg-primary text-white"
+                    }`}
+                  >
+                    {page.value}
+                  </NavLink>
+                );
+              })}
+            <Switcher />
           </div>
         </div>
       </Layout>

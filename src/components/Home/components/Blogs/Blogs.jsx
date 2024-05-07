@@ -7,7 +7,7 @@ import { NavLink } from "react-router-dom";
 
 const Blogs = () => {
   return (
-    <div className=" py-10">
+    <div className=" pb-10">
       <Layout>
         <div className=" space-y-10">
           <div className=" flex flex-col justify-center items-center">

@@ -11,6 +11,11 @@ import Cart from "../components/Cart/Cart";
 import Checkout from "../components/Checkout/Checkout";
 import CategoryPage from "../components/CategoryPage/CategoryPage";
 import CategoryItemPage from "../components/CategoryPage/CategoryItemPage";
+import About from "../components/Home/components/About/About";
+import Projects from "../components/Home/components/Projects/Projects";
+import Blogs from "../components/Home/components/Blogs/Blogs";
+import Contact from "../components/Home/components/Contact/Contact";
+import Education from "../components/Home/components/Education/Education";
 
 export const pages = [
   {
@@ -22,76 +27,45 @@ export const pages = [
     show: true,
   },
   {
-    path: "/product-details/:id",
+    path: "/#about", // Adjust the path to start with '#'
     exact: true,
-    component: ProductDetails,
-    key: "product-details",
-    value: "product Details",
-    show: false,
-  },
-  {
-    path: "/task-manager",
-    exact: true,
-    component: TaskManager,
-    key: "task-manager",
-    value: "Task Manager",
+    component: About,
+    key: "about",
+    value: "About",
     show: true,
   },
   {
-    path: "/our-courses",
+    path: "/#projects", // Adjust the path to start with '#'
     exact: true,
-    component: AllCourses,
-    key: "our-courses",
-    value: "Our Courses",
+    component: Projects,
+    key: "projects",
+    value: "Projects",
     show: true,
   },
   {
-    path: "/course-details/:id",
+    path: "/#background", // Adjust the path to start with '#'
     exact: true,
-    component: CourseDetails,
-    key: "course-details",
-    value: "Course Details",
-    show: false,
+    component: Education,
+    key: "background",
+    value: "Background",
+    show: true,
   },
   {
-    path: "/login",
+    path: "/#blogs", // Adjust the path to start with '#'
     exact: true,
-    component: Login,
-    key: "login",
-    value: "Login",
-    show: false,
+    component: Blogs,
+    key: "blogs",
+    value: "Blogs",
+    show: true,
   },
+
   {
-    path: "/cart",
+    path: "/#contact", // Adjust the path to start with '#'
     exact: true,
-    component: Cart,
-    key: "cart",
-    value: "Cart",
-    show: false,
-  },
-  {
-    path: "/checkout",
-    exact: true,
-    component: Checkout,
-    key: "checkout",
-    value: "Checkout",
-    show: false,
-  },
-  {
-    path: "/category/:cat",
-    exact: true,
-    component: CategoryPage,
-    key: "category",
-    value: "Category",
-    show: false,
-  },
-  {
-    path: "/:item",
-    exact: true,
-    component: CategoryItemPage,
-    key: "item",
-    value: "Item",
-    show: false,
+    component: Contact,
+    key: "contact",
+    value: "Contact",
+    show: true,
   },
 ];
 

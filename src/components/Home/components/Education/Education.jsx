@@ -10,7 +10,7 @@ import {
 
 const Education = () => {
   return (
-    <div className=" py-10 bg-slate-700 my-20">
+    <div className=" py-10 bg-slate-700 ">
       <Layout>
         <div className=" space-y-10 px-5 pt-0">
           <div className=" flex flex-col justify-center items-center">
