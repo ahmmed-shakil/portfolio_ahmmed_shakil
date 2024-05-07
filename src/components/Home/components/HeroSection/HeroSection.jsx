@@ -6,6 +6,7 @@ import bgImg from "../../../../images/HeroSection/hero-bg.gif";
 import spaceImg from "../../../../images/HeroSection/lynx_in_space.png";
 import { getGreeting } from "../../../../utils/getGreetings";
 import TypewriterComponent from "typewriter-effect";
+import { HashLink as NavLink } from "react-router-hash-link";
 
 const HeroSection = () => {
   const now = new Date();
@@ -48,9 +49,23 @@ const HeroSection = () => {
                   }}
                 />
               </div>
-              <div className=" flex justify-start items-center gap-2 mt-0">
-                <ButtonPrimary text={"View Projects"} />
-                <ButtonPrimary text={"Download Resume"} />
+              <div className=" flex flex-col md:flex-row justify-start items-center gap-2 mt-0">
+                <NavLink
+                  className="bg-primary text-center text-gray-200 px-3 py-2 w-full md:w-auto rounded-md transition-all delay-200 shadow hover:shadow-lg hover:bg-transparent border-transparent border-solid border-2 hover:border-primary hover:text-primary hover:scale-105"
+                  to={"/#projects"}
+                  scroll={(el) =>
+                    el.scrollIntoView({
+                      behavior: "smooth",
+                      block: "start",
+                    })
+                  }
+                >
+                  View Projects
+                </NavLink>
+                <ButtonPrimary
+                  className={"w-full md:w-auto"}
+                  text={"Download Resume"}
+                />
               </div>
             </div>
             <div className=" hidden md:flex">
