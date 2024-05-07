@@ -52,9 +52,9 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className=" flex justify-center items-center gap-2 mt-10">
+      <div className=" flex flex-col md:flex-row justify-center items-center gap-2 mt-10">
         <NavLink
-          className="bg-primary text-gray-200 px-3 py-2 rounded-md mt-4 transition-all delay-200 shadow hover:shadow-lg hover:bg-transparent border-transparent border-solid border-2 hover:border-primary hover:text-primary hover:scale-105"
+          className="bg-primary text-gray-200 px-3 py-2 w-full md:w-auto rounded-md mt-4 transition-all delay-200 shadow hover:shadow-lg hover:bg-transparent border-transparent border-solid border-2 hover:border-primary hover:text-primary hover:scale-105"
           to={"/#background"}
           scroll={(el) =>
             el.scrollIntoView({
@@ -65,7 +65,10 @@ const About = () => {
         >
           Learn More About Me
         </NavLink>
-        <ButtonPrimary text={"Download Resume"} />
+        <ButtonPrimary
+          className={"w-full md:w-auto"}
+          text={"Download Resume"}
+        />
       </div>
       <div className=" py-10 gradient-background rounded-md my-20">
         <Technologies />

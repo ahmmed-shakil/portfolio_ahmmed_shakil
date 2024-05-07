@@ -55,7 +55,7 @@ const HeroSection = () => {
             </div>
             <div className=" hidden md:flex">
               <AnalogClock />
-              <img src={spaceImg} alt="hero_img" className="h-[100px]" />
+              {/* <img src={spaceImg} alt="hero_img" className="h-[100px]" /> */}
             </div>
           </div>
         </Layout>

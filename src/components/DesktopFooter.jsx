@@ -1,7 +1,7 @@
 import React from "react";
 import { Layout } from "./shared/Layout/Layout";
 import { EnvelopeIcon, PhoneIcon, MapPinIcon } from "@heroicons/react/24/solid";
-import { NavLink } from "react-router-dom";
+import { HashLink as NavLink } from "react-router-hash-link";
 import paymentImg from "../images/payments.f8a603e8.png";
 
 const DesktopFooter = () => {
@@ -41,23 +41,50 @@ const DesktopFooter = () => {
                   </h4>
                 </div>
               </div>
-              <div className=" flex justify-start md:justify-center py-10 md:py-0 ">
+              <div className="hidden md:flex justify-start md:justify-center py-10 md:py-0  ">
                 <div className=" flex flex-col space-y-3">
                   <h2 className="text-xl font-semibold text-left">
                     <span className="text-primary">Useful Links</span>
                   </h2>
-                  <NavLink className=" hover:underline text-left">
+                  <NavLink
+                    scroll={(el) =>
+                      el.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                      })
+                    }
+                    to={"/#projects"}
+                    className=" hover:underline text-left"
+                  >
                     Projects
                   </NavLink>
-                  <NavLink className=" hover:underline text-left">
+                  <NavLink
+                    scroll={(el) =>
+                      el.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                      })
+                    }
+                    to={"/#about"}
+                    className=" hover:underline text-left"
+                  >
                     About
                   </NavLink>
-                  <NavLink className=" hover:underline text-left">
+                  <NavLink
+                    scroll={(el) =>
+                      el.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                      })
+                    }
+                    to={"/#blogs"}
+                    className=" hover:underline text-left"
+                  >
                     Blogs
                   </NavLink>
                 </div>
               </div>
-              <div className=" flex flex-col items-center">
+              <div className=" mt-14 md:mt-0 flex flex-col items-start md:items-center">
                 <div className=" flex flex-col justify-start space-y-5">
                   <h2 className="text-xl font-semibold text-left">
                     <span className="text-primary">Social Media Link</span>
@@ -232,6 +259,11 @@ const DesktopFooter = () => {
                 copyright &copy; 2024. Shakil Ahmmed Joy
               </p>
               <p className=" text-right">v 1.0.0</p>
+            </div>
+            <div className=" grid md:hidden grid-cols-1 items-center justify-between pb-3">
+              <p className=" text-center">
+                copyright &copy; 2024. Shakil Ahmmed Joy
+              </p>
             </div>
           </div>
         </Layout>
