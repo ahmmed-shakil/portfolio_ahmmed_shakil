@@ -45,7 +45,7 @@ const Education = () => {
                 </Typography>
                 <div className=" flex justify-between items-center">
                   <Typography className=" text-sm font-semibold mt-0 pt-0">
-                    Year: 2014
+                    Year: 2016
                   </Typography>
                 </div>
               </div>
@@ -82,10 +82,6 @@ const Education = () => {
                 <div>
                   <Typography className=" text-sm font-semibold mt-0 pt-0">
                     Year: 2020-2022
-                  </Typography>
-                  <Typography className=" text-sm font-semibold mt-0 pt-0">
-                    Fundamentals of MERN Stack web development with JavaScript,
-                    React, Redux, Node.js, Mongodb and other tools
                   </Typography>
                   <Typography className=" text-sm font-semibold mt-0 pt-0">
                     Fundamentals of MERN Stack web development with JavaScript,

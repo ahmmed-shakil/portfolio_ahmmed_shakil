@@ -41,7 +41,7 @@ const About = () => {
               options={{
                 strings: [
                   `I am an ambitious, self-motivated, quick learner and able to work with minimum supervision under tight schedules with an aptitude for learning new technology. I excel in high-pressure environments, consistently delivering quality results on time. My commitment to continuous improvement drives my desire to stay current with industry trends and advancements.`,
-                  "I have graudated from Shahjalal University of Science and Technology in Geography and Environment in 2021. Currently working as a Software Developer in a company since May, 2021",
+                  "I have graudated from Shahjalal University of Science and Technology in Geography and Environment (2017-2021). Currently working as a Software Developer in JSM Tech Enterprises Pvt Ltd(India) since May, 2021",
                 ],
                 autoStart: true,
                 loop: true,

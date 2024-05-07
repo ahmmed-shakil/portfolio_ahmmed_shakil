@@ -24,7 +24,7 @@ const Projects = () => {
         {
           image: carehubImage,
           title: "CAREHUB",
-          desc: "This is a website showing the services and details of a healt clinic. I have integrated firebase in this website for user authentication. The UI was built with react and react router dom was used for routing",
+          desc: "This is a website showing the services and details of a health clinic. I have integrated firebase in this website for user authentication. The UI was built with react and react router dom was used for routing",
           links: [
             {
               title: "View",
