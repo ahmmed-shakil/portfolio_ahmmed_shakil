@@ -16,6 +16,9 @@ import Projects from "../components/Home/components/Projects/Projects";
 import Blogs from "../components/Home/components/Blogs/Blogs";
 import Contact from "../components/Home/components/Contact/Contact";
 import Education from "../components/Home/components/Education/Education";
+import Types from "../components/AllBlogs/TypeScript/Types/Types";
+import DesktopHeader from "../components/shared/DesktopHeader";
+import MobileHeader from "../components/shared/MobileHeader";
 
 export const pages = [
   {
@@ -67,11 +70,29 @@ export const pages = [
     value: "Contact",
     show: true,
   },
+  {
+    path: "/blogs",
+    exact: true,
+    component: Contact,
+    key: "blogs",
+    value: "Blogs",
+    show: false,
+  },
+  {
+    path: "/blog/understanding_typescript_definitions_and_types",
+    exact: true,
+    component: Types,
+    key: "blog_details",
+    value: "Blog Details",
+    show: false,
+  },
 ];
 
 const MyRoutes = () => {
   return (
     <BrowserRouter basename="/">
+      <DesktopHeader />
+      <MobileHeader />
       <Routes>
         {pages.map(({ component, path }) => {
           const Component = component;

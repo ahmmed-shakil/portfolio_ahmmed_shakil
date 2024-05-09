@@ -21,6 +21,7 @@ module.exports = {
         cartCard: "4fr 1fr 1fr",
         product: "1fr 1.3fr 1fr",
         cartSummary: "3fr 1fr",
+        blogPage: "3fr 1fr",
       },
       gridRowColumns: {
         projectCard: "2fr 3fr 1fr",
