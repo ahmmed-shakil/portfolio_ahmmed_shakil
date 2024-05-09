@@ -26,7 +26,7 @@ const MobileHeader = () => {
   // Define the slide-down animation using useSpring for the image div
   const slideOut = useSpring({
     opacity: show ? 0 : 1,
-    transform: show ? "translateX(-100%)" : "translateX(0)",
+    transform: show ? "translateX(100%)" : "translateX(0)",
     config: { tension: 150, friction: 30 },
   });
 
@@ -66,74 +66,80 @@ const MobileHeader = () => {
               width={28}
             />
           ) : (
-            <XMarkIcon onClick={() => setShow(false)} height={28} width={28} />
+            <XMarkIcon
+              onClick={() => {
+                setTimeout(() => {
+                  setShow(false);
+                }, [350]);
+              }}
+              height={28}
+              width={28}
+            />
           )}
         </div>
       </div>
-      {show && (
-        <animated.div
-          className=" bg-slate-800 text-slate-200 z-50 p-4 transition-all duration-1000 ease-in-out"
-          ref={mobileMenuRef}
-          style={{
-            right: show ? "0" : "-300px",
-            height: "100vh",
-            width: "300px",
-            position: "absolute",
-            transition: "right 1s ease-in-out", // Add transition property to style
-            ...slideInLeft,
-          }}
-        >
-          <div className="flex flex-col items-start space-y-2">
-            {pages
-              ?.filter((page) => page.show)
-              .map((page) => {
-                const isHashLink = page.path.startsWith("/#");
+      <animated.div
+        className={`bg-slate-800 text-slate-200 z-50 p-4 ${!show && "hidden"}`}
+        ref={mobileMenuRef}
+        style={{
+          right: show ? "0" : "-300px",
+          height: "100vh",
+          width: "300px",
+          position: "absolute",
+          transition: "right 1s ease-in-out", // Add transition property to style
+          ...slideInLeft,
+        }}
+      >
+        <div className={`flex flex-col items-start space-y-2`}>
+          {pages
+            ?.filter((page) => page.show)
+            .map((page) => {
+              const isHashLink = page.path.startsWith("/#");
 
-                return isHashLink ? (
-                  <NavLink
-                    key={page.value}
-                    smooth
-                    to={page.path}
-                    scroll={(el) =>
-                      el.scrollIntoView({
-                        behavior: "smooth",
-                        block: "center",
-                      })
-                    }
-                    className={`nav-item ${
-                      `/${window.location.hash}` === page.path &&
-                      "bg-primary text-slate-50 w-full"
-                    }`}
-                    onClick={() => setShow(false)}
-                  >
-                    {page.value}
-                  </NavLink>
-                ) : (
-                  <NavLink
-                    key={page.value}
-                    onClick={() => {
-                      scrollToTop();
-                      setShow(false);
-                    }}
-                    to={page.path}
-                    scroll={(el) =>
-                      el.scrollIntoView({
-                        behavior: "smooth",
-                        block: "start",
-                      })
-                    }
-                    className={`nav-item ${
-                      `/${window.location.hash}` === "/" &&
-                      "bg-primary text-white w-full"
-                    }`}
-                  >
-                    {page.value}
-                  </NavLink>
-                );
-              })}
-          </div>
-        </animated.div>
-      )}
+              return isHashLink ? (
+                <NavLink
+                  key={page.value}
+                  smooth
+                  to={page.path}
+                  scroll={(el) =>
+                    el.scrollIntoView({
+                      behavior: "smooth",
+                      block: "center",
+                    })
+                  }
+                  className={`nav-item ${
+                    `/${window.location.hash}` === page.path &&
+                    "bg-primary text-slate-50 w-full"
+                  }`}
+                  onClick={() => setShow(false)}
+                >
+                  {page.value}
+                </NavLink>
+              ) : (
+                <NavLink
+                  key={page.value}
+                  onClick={() => {
+                    scrollToTop();
+                    setShow(false);
+                  }}
+                  to={page.path}
+                  scroll={(el) =>
+                    el.scrollIntoView({
+                      behavior: "smooth",
+                      block: "start",
+                    })
+                  }
+                  className={`nav-item ${
+                    `/${window.location.hash}` === "/" &&
+                    "bg-primary text-white w-full"
+                  }`}
+                >
+                  {page.value}
+                </NavLink>
+              );
+            })}
+        </div>
+      </animated.div>
     </div>
   );
 };

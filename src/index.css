@@ -101,3 +101,11 @@ code {
 }
 
 
+/* Animation for sliding in from the right */
+.mobile-menu-enter {
+  animation: slideInFromLeft 0.3s forwards;
+}
+
+
+
+

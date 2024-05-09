@@ -23,9 +23,9 @@ const Home = () => {
         <div>
           <HeroSection />
         </div>
-        <div id="about" className="pt-0 md:pt-40">
-          <About />
-        </div>
+        {/* <div id="about" className="pt-0 md:pt-40"> */}
+        <About />
+        {/* </div> */}
         <div id="projects" className=" pt-0 md:pt-40">
           <Projects />
         </div>

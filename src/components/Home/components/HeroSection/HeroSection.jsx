@@ -7,6 +7,7 @@ import spaceImg from "../../../../images/HeroSection/lynx_in_space.png";
 import { getGreeting } from "../../../../utils/getGreetings";
 import TypewriterComponent from "typewriter-effect";
 import { HashLink as NavLink } from "react-router-hash-link";
+import { handleResumeDownload } from "../../../../utils/getResume";
 
 const HeroSection = () => {
   const now = new Date();
@@ -63,6 +64,7 @@ const HeroSection = () => {
                   View Projects
                 </NavLink>
                 <ButtonPrimary
+                  onClick={handleResumeDownload}
                   className={"w-full md:w-auto"}
                   text={"Download Resume"}
                 />
