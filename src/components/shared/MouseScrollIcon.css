@@ -1,0 +1,25 @@
+.mouse-scroll-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .mouse {
+    cursor: pointer;
+    fill: green; /* Customize the color as needed */
+  }
+  
+  .dot {
+    animation: bounce 2s infinite ease-in-out; /* Animation for bouncing dot */
+  }
+  
+  /* Keyframes for the bounce animation */
+  @keyframes bounce {
+    0%, 100% {
+      cy: 10; /* Start and end position */
+    }
+    50% {
+      cy: 15; /* Middle position */
+    }
+  }
+  
