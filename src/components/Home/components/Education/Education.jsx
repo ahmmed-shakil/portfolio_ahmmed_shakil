@@ -11,7 +11,7 @@ import ProfileCard from "./ProfileCard";
 
 const Education = () => {
   return (
-    <div className=" py-10 bg-slate-700 ">
+    <div className=" pt-10 pb-20 md:pb-10 bg-slate-700 ">
       <Layout>
         <div className=" space-y-10 px-5 pt-0">
           <div className=" flex flex-col justify-center items-center">
