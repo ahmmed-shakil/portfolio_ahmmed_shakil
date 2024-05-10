@@ -219,7 +219,7 @@ const Projects = () => {
   }, [selectedType]);
   console.log("🚀 ~ Projects ~ selectedItems:", selectedItems);
   return (
-    <div>
+    <div className="pb-24 md:pb-0">
       <Layout>
         <div className=" flex flex-col justify-center items-center mb-10">
           <Typography className=" section_title">PROJECTS</Typography>

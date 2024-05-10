@@ -23,19 +23,19 @@ const Home = () => {
         <div>
           <HeroSection />
         </div>
-        <div id="about" className="pt-0 md:pt-40">
+        <div id="about" className="pt-24 md:pt-40">
           <About />
         </div>
-        <div id="projects" className=" pt-0 md:pt-40">
+        <div id="projects" className=" pt-24 md:pt-40">
           <Projects />
         </div>
-        <div id="background" className=" pt-0 md:pt-40">
+        <div id="background" className=" pt-24 md:pt-40">
           <Education />
         </div>
         <div id="blogs" className=" pt-24 md:pt-36">
           <Blogs />
         </div>
-        <div id="contact" className=" pt-0 md:pt-40">
+        <div id="contact" className=" pt-24 md:pt-40">
           <Contact />
         </div>
       </div>

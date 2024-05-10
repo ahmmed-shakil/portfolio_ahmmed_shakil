@@ -104,7 +104,7 @@ const MobileHeader = () => {
                   scroll={(el) =>
                     el.scrollIntoView({
                       behavior: "smooth",
-                      block: "center",
+                      block: "start",
                     })
                   }
                   className={`nav-item ${
