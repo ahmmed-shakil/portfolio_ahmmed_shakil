@@ -19,11 +19,7 @@ const Types = () => {
     <div>
       <BlogTitle text={state?.title} />
       <BlogImage image={state?.image} />
-      <BlogText
-        text={
-          "When developing web applications, you want your code to be robust, clear, and efficient. One way to achieve this is by using TypeScript, a popular programming language that extends JavaScript with optional static typing and other powerful features. In this blog, we'll explore TypeScript definitions and types, focusing on how they help you catch errors early and write cleaner, more reliable code."
-        }
-      />
+      <BlogText text={state?.desc} />
       <BlogSubtitle text={"What is TypeScript?"} />
       <BlogText
         text={

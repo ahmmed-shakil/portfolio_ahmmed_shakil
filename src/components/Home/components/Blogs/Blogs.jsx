@@ -24,7 +24,7 @@ const Blogs = () => {
           {blogs?.map((blog, index) => (
             <div key={index} class="flex flex-wrap justify-center mt-10">
               <div class="p-4 max-w-sm">
-                <div class=" group flex rounded-lg h-full bg-slate-100 dark:bg-slate-900 dark:hover:bg-primary hover:text-slate-200 shadow-md hover:bg-primary transition-all duration-500 ease-in-out p-3 flex-col">
+                <div class=" group flex rounded-lg h-full bg-slate-100 dark:bg-slate-900  shadow-md hover:shadow-lg transition-all duration-500 ease-in-out p-3 flex-col">
                   <div className=" mb-3">
                     <img
                       className=" h-[180px] object-cover rounded-md"
@@ -55,7 +55,7 @@ const Blogs = () => {
                     <Link
                       to={`/blog/${blog.slug}`}
                       state={blog}
-                      className="mt-3 rounded-md py-1  hover:scale-105 transition-all duration-300 ease-in-out bg-primary group-hover:bg-slate-100 text-slate-200 inline-flex items-center justify-center group-hover:text-primary dark:group-hover:bg-slate-700 dark:group-hover:text-slate-200"
+                      className="mt-3 rounded-md py-1 border-2 border-primary  hover:scale-105 transition-all duration-300 ease-in-out bg-primary text-slate-200 inline-flex items-center justify-center"
                     >
                       Read More
                       <svg
