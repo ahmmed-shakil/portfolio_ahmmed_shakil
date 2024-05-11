@@ -21,7 +21,7 @@ const Education = () => {
             <Line prop={"bg-third"} />
           </div>
           <div className=" grid grid-cols-1 md:grid-cols-2 gap-4 items-start justify-between">
-            <div className=" mb-10 md:mb-0 sticky top-40">
+            <div className=" mb-10 md:mb-0 md:sticky md:top-40">
               <ProfileCard />
             </div>
             <div className="space-y-2 md:space-y-10 text-third">
