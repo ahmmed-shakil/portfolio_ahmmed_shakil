@@ -20,6 +20,7 @@ import Types from "../components/AllBlogs/TypeScript/Types/Types";
 import DesktopHeader from "../components/shared/DesktopHeader";
 import MobileHeader from "../components/shared/MobileHeader";
 import MobileFooter from "../components/MobileFooter";
+import ErrorPage from "../components/ErrorPage/ErrorPage";
 
 export const pages = [
   {
@@ -92,17 +93,13 @@ export const pages = [
 const MyRoutes = () => {
   return (
     <BrowserRouter basename="/">
-      <DesktopHeader />
-      <MobileHeader />
       <Routes>
         {pages.map(({ component, path }) => {
           const Component = component;
           return <Route key={path} element={<Component />} path={path} />;
         })}
-        {/* <Route element={<Page404 />} /> */}
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
-      <MobileFooter />
-      <DesktopFooter />
     </BrowserRouter>
   );
 };

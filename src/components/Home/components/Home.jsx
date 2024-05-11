@@ -15,12 +15,14 @@ import Blogs from "./Blogs/Blogs";
 import Contact from "./Contact/Contact";
 import SmoothScroll from "../../shared/SmoothScroll";
 import MouseScrollIcon from "../../shared/MouseScrollIcon";
+import DesktopFooter from "../../DesktopFooter";
+import MobileFooter from "../../MobileFooter";
 
 const Home = () => {
   return (
     <div>
-      {/* <DesktopHeader /> */}
-      {/* <MobileHeader /> */}
+      <DesktopHeader />
+      <MobileHeader />
       <div>
         <div className=" relative">
           <SmoothScroll targetId="about" bottom={"50px"}>
@@ -71,6 +73,9 @@ const Home = () => {
       {/* <TaskManagerAdd /> */}
       {/* <RoadMap /> */}
       {/* <Contact /> */}
+
+      <MobileFooter />
+      <DesktopFooter />
     </div>
   );
 };
