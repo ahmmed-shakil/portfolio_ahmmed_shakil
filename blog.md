@@ -115,6 +115,33 @@ let employee: Person = {
 };
 ```
 
+Section: TypeScript Definitions and Types
+
+Subheading: (After mentioning Union Types)
+
+Intersection Types: Intersection types combine multiple existing types into a single new type. This allows you to create a type that has all the properties of the combined types. The & symbol is used to define intersection types.
+
+Here's an example:
+
+TypeScript
+interface HasName {
+name: string;
+}
+
+interface HasAge {
+age: number;
+}
+
+type Person = HasName & HasAge;
+
+let employee: Person = {
+name: "Alice",
+age: 30,
+};
+In this example, the Person type is an intersection of HasName and HasAge interfaces. So, a variable of type Person must have both name (string) and age (number) properties.
+
+Intersection types are useful for situations where you want to combine functionalities from different interfaces or types.
+
 In this example, the `Person` interface describes an object with `name` and `age` properties.
 
 ### Conclusion

@@ -4,7 +4,7 @@ import Typography from "../../shared/Typography/Typography";
 import { ClipboardDocumentCheckIcon } from "@heroicons/react/20/solid";
 import { ClipboardDocumentIcon } from "@heroicons/react/20/solid";
 
-const CodeEditor = ({ title, children }) => {
+const CodeEditor = ({ children }) => {
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {
@@ -25,7 +25,6 @@ const CodeEditor = ({ title, children }) => {
             <div></div>
             <div></div>
           </div>
-          <Typography>{title}</Typography>
         </div>
         {/* {copied ? (
           <div className=" flex justify-end items-center gap-1">
@@ -47,7 +46,7 @@ const CodeEditor = ({ title, children }) => {
         )} */}
       </div>
       <Line prop={"w-full mb-4 h-1 bg-slate-500"} />
-      <div className=" px-4 pb-8">{children}</div>
+      <div className=" px-4 pb-4">{children}</div>
     </div>
   );
 };

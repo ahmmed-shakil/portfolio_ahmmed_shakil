@@ -131,14 +131,6 @@ const DesktopHeader = () => {
               .map((page) => {
                 // Check if it's a hash link or a regular link
                 const isHashLink = page.path.startsWith("/#");
-                console.log(
-                  "path",
-                  pathname,
-                  "magi",
-                  page.path,
-                  "khanki",
-                  window.location.hash
-                );
 
                 return isHashLink ? (
                   <NavLink

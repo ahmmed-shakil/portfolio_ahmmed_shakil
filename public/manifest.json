@@ -1,11 +1,24 @@
 {
   "name": "Shakil Ahmmed Joy",
   "short_name": "Portfolio",
+  "description": "Welcome! Let's have a tour to my portoflio",
   "theme_color": "#04aa6d",
   "background_color": "#04aa6d",
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
+  "screenshots": [
+    {
+      "src": "mobile_ss.png",
+      "sizes": "350x747",
+      "type": "phone"
+    },
+    {
+      "src": "desktop_ss.png",
+      "sizes": "1900x859",
+      "type": "desktop"
+    }
+  ],
   "icons": [
      {
       "src":"maskable.png",

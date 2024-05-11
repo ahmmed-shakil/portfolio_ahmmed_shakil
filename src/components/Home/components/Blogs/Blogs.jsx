@@ -5,6 +5,7 @@ import Line from "../../../shared/Line";
 import image from "../../../../images/Projects/carehub.png";
 import { NavLink } from "react-router-dom";
 import { blogList } from "./blogPosts";
+import { Link } from "react-router-dom";
 
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
@@ -27,7 +28,7 @@ const Blogs = () => {
                   <div className=" mb-3">
                     <img
                       className=" h-[180px] object-cover rounded-md"
-                      src={image}
+                      src={blog.image}
                       alt="Image"
                     />
                   </div>
@@ -51,8 +52,9 @@ const Blogs = () => {
                     <p className="leading-relaxed text-base">
                       {blog?.desc?.slice(0, 180)}...
                     </p>
-                    <NavLink
+                    <Link
                       to={`/blog/${blog.slug}`}
+                      state={blog}
                       className="mt-3 rounded-md py-1  hover:scale-105 transition-all duration-300 ease-in-out bg-primary group-hover:bg-slate-100 text-slate-200 inline-flex items-center justify-center group-hover:text-primary dark:group-hover:bg-slate-700 dark:group-hover:text-slate-200"
                     >
                       Read More
@@ -67,7 +69,7 @@ const Blogs = () => {
                       >
                         <path d="M5 12h14M12 5l7 7-7 7"></path>
                       </svg>
-                    </NavLink>
+                    </Link>
                   </div>
                 </div>
               </div>
