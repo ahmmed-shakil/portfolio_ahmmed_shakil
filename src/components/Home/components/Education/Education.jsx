@@ -11,7 +11,7 @@ import ProfileCard from "./ProfileCard";
 
 const Education = () => {
   return (
-    <div className=" pt-10 pb-20 md:pb-10 bg-slate-700 ">
+    <div className=" pt-10 pb-20 md:pb-10 bg-slate-700">
       <Layout>
         <div className=" space-y-10 px-5 pt-0">
           <div className=" flex flex-col justify-center items-center">
@@ -21,7 +21,7 @@ const Education = () => {
             <Line prop={"bg-third"} />
           </div>
           <div className=" grid grid-cols-1 md:grid-cols-2 gap-4 items-start justify-between">
-            <div className=" mb-10 md:mb-0">
+            <div className=" mb-10 md:mb-0 sticky top-40">
               <ProfileCard />
             </div>
             <div className="space-y-2 md:space-y-10 text-third">

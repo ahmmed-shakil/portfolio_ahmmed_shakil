@@ -21,13 +21,13 @@ const Blogs = () => {
             <Typography className="section_title">BLOGS</Typography>
             <Line />
           </div>
-          {blogs?.map((blog, index) => (
-            <div key={index} class="flex flex-wrap justify-center mt-10">
-              <div class="p-4 max-w-sm">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 justify-center mt-10">
+            {blogs?.map((blog, index) => (
+              <div key={index} class="max-w-sm">
                 <div class=" group flex rounded-lg h-full bg-slate-100 dark:bg-slate-900  shadow-md hover:shadow-lg transition-all duration-500 ease-in-out p-3 flex-col">
                   <div className=" mb-3">
                     <img
-                      className=" h-[180px] object-cover rounded-md"
+                      className=" h-[180px] object-cover rounded-md w-full"
                       src={blog.image}
                       alt="Image"
                     />
@@ -43,7 +43,9 @@ const Blogs = () => {
                         class="w-5 h-5"
                         viewBox="0 0 24 24"
                       >
-                        <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                        <circle cx="12" cy="12" r="10" />
+                        <line x1="12" y1="16" x2="12" y2="12" />
+                        <line x1="12" y1="8" x2="12" y2="8" />
                       </svg>
                     </div>
                     <h2 class="text-lg font-semibold">{blog.title}</h2>
@@ -73,8 +75,8 @@ const Blogs = () => {
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </Layout>
     </div>
