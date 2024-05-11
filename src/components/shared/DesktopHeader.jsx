@@ -47,7 +47,7 @@ const DesktopHeader = () => {
   }, [phoneCopied]);
   return (
     <div
-      className="hidden md:block sticky bg-slate-800 text-slate-200 top-0 shadow"
+      className="hidden lg:block sticky bg-slate-800 text-slate-200 top-0 shadow"
       style={{ zIndex: 999 }}
     >
       <div className=" py-2 bg-primary">
@@ -131,7 +131,14 @@ const DesktopHeader = () => {
               .map((page) => {
                 // Check if it's a hash link or a regular link
                 const isHashLink = page.path.startsWith("/#");
-                console.log("path", pathname, page.path, window.location.hash);
+                console.log(
+                  "path",
+                  pathname,
+                  "magi",
+                  page.path,
+                  "khanki",
+                  window.location.hash
+                );
 
                 return isHashLink ? (
                   <NavLink
@@ -158,7 +165,8 @@ const DesktopHeader = () => {
                       el.scrollIntoView({ behavior: "smooth", block: "start" })
                     }
                     className={`nav-item ${
-                      `/${window.location.hash}` === "/" &&
+                      `${pathname}` === "/" &&
+                      !window.location.hash &&
                       "bg-primary text-white"
                     }`}
                   >

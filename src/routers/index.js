@@ -19,6 +19,7 @@ import Education from "../components/Home/components/Education/Education";
 import Types from "../components/AllBlogs/TypeScript/Types/Types";
 import DesktopHeader from "../components/shared/DesktopHeader";
 import MobileHeader from "../components/shared/MobileHeader";
+import MobileFooter from "../components/MobileFooter";
 
 export const pages = [
   {
@@ -100,6 +101,7 @@ const MyRoutes = () => {
         })}
         {/* <Route element={<Page404 />} /> */}
       </Routes>
+      <MobileFooter />
       <DesktopFooter />
     </BrowserRouter>
   );

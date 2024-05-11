@@ -6,7 +6,7 @@ import paymentImg from "../images/payments.f8a603e8.png";
 
 const DesktopFooter = () => {
   return (
-    <div className=" mt-14 md:mt-56">
+    <div className=" mt-14 md:mt-56 hidden lg:block">
       <hr className=" h-1 bg-primary w-full" />
       <div className=" bg-secondary text-slate-200">
         <Layout>

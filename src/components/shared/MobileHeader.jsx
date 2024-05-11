@@ -7,8 +7,10 @@ import Switcher from "../../DarkModeSwitch/Switcher";
 import { pages } from "../../routers";
 import { scrollToTop } from "../../utils/scrollToTop";
 import { useSpring, animated } from "react-spring";
+import { useLocation } from "react-router-dom";
 
 const MobileHeader = () => {
+  const { pathname } = useLocation();
   const [show, setShow] = useState(false);
   const mobileMenuRef = useRef(null);
 
@@ -50,7 +52,7 @@ const MobileHeader = () => {
 
   return (
     <div
-      className=" block sticky top-0 md:hidden shadow-md"
+      className=" block sticky top-0 lg:hidden shadow-md"
       style={{ zIndex: 999 }}
     >
       <div className=" bg-slate-800 flex justify-between p-4 items-center">
@@ -130,8 +132,9 @@ const MobileHeader = () => {
                     })
                   }
                   className={`nav-item ${
-                    `/${window.location.hash}` === "/" &&
-                    "bg-primary text-white w-full"
+                    `${pathname}` === "/" &&
+                    !window.location.hash &&
+                    "bg-primary text-white"
                   }`}
                 >
                   {page.value}
