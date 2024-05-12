@@ -73,7 +73,10 @@ const ErrorPage = () => {
 
       <h2 className=" font-4xl">404</h2>
       <h2 className="err_h2">Page Not Found</h2>
-      <button onClick={handleGotoHome} className={"err_btn"}>
+      <button
+        onClick={handleGotoHome}
+        className={"err_btn bg-primary py-2 px-3 rounded-md shadow-md"}
+      >
         Back to Home
       </button>
     </div>
