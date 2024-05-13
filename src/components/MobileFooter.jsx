@@ -16,11 +16,13 @@ const MobileFooter = () => {
               </h2>
               <div className=" flex items-center gap-2">
                 <MapPinIcon className=" h-5 w-5" />
-                <h4 className=" text-lg font-medium">Mymensingh, Bangladesh</h4>
+                <h4 className=" text-md md:text-lg font-medium">
+                  Mymensingh, Bangladesh
+                </h4>
               </div>
               <div className=" flex items-center gap-2">
                 <EnvelopeIcon className=" h-5 w-5" />
-                <h4 className=" text-lg font-medium">
+                <h4 className=" text-md md:text-lgfont-medium">
                   Official:{" "}
                   <NavLink className=" hover:underline">
                     shakilahmmed252@gmail.com
@@ -29,7 +31,7 @@ const MobileFooter = () => {
               </div>
               <div className=" flex items-center gap-2">
                 <PhoneIcon className=" h-5 w-5" />
-                <h4 className=" text-lg font-medium">
+                <h4 className=" text-md md:text-lg font-medium">
                   Helpline:
                   <NavLink className=" hover:underline mx-1">
                     +88 01796282969
@@ -40,7 +42,7 @@ const MobileFooter = () => {
           </div>
           <div className=" flex flex-col justify-center items-center py-5">
             <div className=" flex flex-col justify-center space-y-5">
-              <h2 className="text-xl font-semibold text-center">
+              <h2 className="text-md md:text-xl font-semibold text-center">
                 <span className="text-primary">Social Media Link</span>
               </h2>
               <div className=" grid grid-cols-5 gap-2">
