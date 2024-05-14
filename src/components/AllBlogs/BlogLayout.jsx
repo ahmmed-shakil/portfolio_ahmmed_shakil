@@ -14,7 +14,7 @@ const BlogLayout = ({ children1, children2 }) => {
       <DesktopHeader />
       <MobileHeader />
       <div className=" py-10  container px-3 lg:px-0 mx-auto w-full lg:w-10/12">
-        <div className=" grid grid-cols-1 lg:grid-cols-blogPage gap-4">
+        <div className=" grid grid-cols-1 lg:grid-cols-blogPage gap-10">
           <div>{children1}</div>
           <div>{children2}</div>
         </div>

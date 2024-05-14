@@ -11,6 +11,7 @@ import BlogPointHeading from "../../components/BlogPointHeading";
 import CodeEditor from "../../components/CodeEditor";
 import Typography from "../../../shared/Typography/Typography";
 import { useLocation, useParams } from "react-router-dom";
+import BlogSideBar from "../../BlogSideBar";
 
 const Types = () => {
   const { state } = useLocation();
@@ -359,7 +360,7 @@ const Types = () => {
       />
     </div>
   );
-  const sideBar = <div>sidebar</div>;
+  const sideBar = <BlogSideBar />;
   return <BlogLayout children1={mainSection} children2={sideBar} />;
 };
 
