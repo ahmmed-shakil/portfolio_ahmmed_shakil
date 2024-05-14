@@ -4,6 +4,8 @@
 @tailwind utilities;
 
 
+
+
 :root {
   --primary: #04AA6D;
   --primary-dark: #038a5b; /* Darker shade of primary color */

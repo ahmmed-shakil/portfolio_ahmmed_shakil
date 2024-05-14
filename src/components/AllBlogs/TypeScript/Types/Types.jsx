@@ -205,7 +205,7 @@ const Types = () => {
               <span className=" text-third">
                 {`$`}
                 {`{`}
-                {`string`}
+                {`name`}
                 {`}`}
               </span>
               `
@@ -331,7 +331,7 @@ const Types = () => {
         </code>
         <code className=" mt-3">
           <Typography className=" text-md mb-2">
-            <i className="mr-1">let</i>employee:{" "}
+            <i className="mr-2">let</i>employee:{" "}
             <span className=" text-third">Person</span> ={" "}
             <span className=" text-third">{`{`}</span>
           </Typography>

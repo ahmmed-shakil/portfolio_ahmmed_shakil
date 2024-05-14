@@ -47,7 +47,7 @@ const DesktopHeader = () => {
   }, [phoneCopied]);
   return (
     <div
-      className="hidden lg:block sticky bg-slate-800 text-slate-200 top-0 shadow"
+      className={`hidden lg:block sticky bg-slate-800 text-slate-200 top-0 shadow`}
       style={{ zIndex: 999 }}
     >
       <div className=" py-2 bg-primary">
