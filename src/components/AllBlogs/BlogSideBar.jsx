@@ -5,11 +5,13 @@ import Typography from "../shared/Typography/Typography";
 import { useState } from "react";
 import BlogCard from "../Home/components/Blogs/BlogCard";
 
-const BlogSideBar = () => {
+const BlogSideBar = ({ slug }) => {
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
-    const selectedBlogs = blogList?.slice(0, 4);
+    const selectedBlogs = blogList
+      ?.filter((blog) => blog.slug !== slug)
+      ?.slice(0, 5);
     setBlogs(selectedBlogs);
   }, [blogList]);
   return (

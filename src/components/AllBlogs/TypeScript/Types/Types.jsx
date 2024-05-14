@@ -360,7 +360,7 @@ const Types = () => {
       />
     </div>
   );
-  const sideBar = <BlogSideBar />;
+  const sideBar = <BlogSideBar slug={state?.slug} />;
   return <BlogLayout children1={mainSection} children2={sideBar} />;
 };
 
