@@ -1,12 +1,16 @@
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/solid";
 import moment from "moment/moment";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
-const DateSelect = () => {
+const DateSelect = ({ setValue }) => {
   const [selectedDate, setSelectedDate] = useState(null);
   const [showDates, setShowDates] = useState(false);
   const date = moment().format("DD MMM, YYYY");
   const days = [];
+
+  useEffect(() => {
+    setValue && setValue(selectedDate);
+  }, [setValue, selectedDate]);
 
   // Function to check if a given day is Friday
   const isFriday = (date) => {

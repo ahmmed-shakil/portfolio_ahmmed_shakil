@@ -233,9 +233,9 @@ const Technologies = () => {
                 }}
                 className={` cursor-pointer ${
                   selected.title === skill.title
-                    ? "bg-slate-200 text-primary"
+                    ? "bg-slate-200 "
                     : "bg-transparent text-slate-200"
-                }  border py-2 font-semibold flex justify-center items-center rounded-md border-slate-200 hover:bg-slate-200 hover:text-primary`}
+                }  border py-2 font-semibold flex justify-center items-center rounded-md border-slate-200 hover:bg-slate-200 hover:text-slate-800`}
               >
                 {skill.title}
               </div>

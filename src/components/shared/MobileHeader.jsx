@@ -28,7 +28,7 @@ const MobileHeader = () => {
   // Define the slide-down animation using useSpring for the image div
   const slideOut = useSpring({
     opacity: show ? 0 : 1,
-    transform: show ? "translateX(100%)" : "translateX(0)",
+    transform: show ? "translateX(90%)" : "translateX(0)",
     config: { tension: 150, friction: 30 },
   });
 
@@ -86,10 +86,10 @@ const MobileHeader = () => {
         style={{
           right: show ? "0" : "-300px",
           height: "100vh",
-          width: "300px",
+          width: "60vw",
           position: "absolute",
           transition: "right 1s ease-in-out", // Add transition property to style
-          ...slideInLeft,
+          // ...slideInLeft,
         }}
       >
         <div className={`flex flex-col items-start space-y-2`}>

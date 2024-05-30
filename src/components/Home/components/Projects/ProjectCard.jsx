@@ -25,7 +25,7 @@ const ProjectCard = ({ data }) => {
     <div
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className={`cursor-pointer h-[340px] bg-primary shadow-lg rounded-md overflow-hidden`}
+      className={`cursor-pointer h-[340px] shadow-lg rounded-md overflow-hidden`}
     >
       {/* Animated div for the image */}
       <animated.div
@@ -42,17 +42,17 @@ const ProjectCard = ({ data }) => {
           />
         </div>
         <div className="p-3">
-          <Typography className="font-semibold text-slate-200 text-lg mb-0 pb-0">
+          <Typography className="font-semibold text-lg mb-0 pb-0">
             {data.title}
           </Typography>
-          <Line prop={"bg-slate-200"} />
+          <Line />
         </div>
-        <div className="px-3">
+        <div className="px-3 absolute">
           {data.tools?.length &&
             data.tools.map((tool, index) => (
               <div
                 key={index}
-                className="border border-slate-200 p-1 inline-flex justify-center items-center text-slate-200 font-semibold hover:bg-slate-200 hover:text-primary rounded-md text-xs mr-2 mb-2"
+                className="border border-primary text-primary p-1 inline-flex justify-center items-center font-semibold hover:bg-slate-200 hover:text-primary rounded-md text-xs mr-2 mb-2"
               >
                 {tool}
               </div>

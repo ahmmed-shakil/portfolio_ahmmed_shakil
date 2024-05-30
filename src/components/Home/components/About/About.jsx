@@ -73,7 +73,8 @@ const About = () => {
             text={"Download Resume"}
           />
         </div>
-        <div className=" py-10 gradient-background rounded-md my-20">
+        {/* <div className=" py-10 gradient-background rounded-md my-20"> */}
+        <div className=" py-10 bg-slate-700 rounded-md my-20">
           <Technologies />
         </div>
       </Layout>

@@ -1,13 +1,17 @@
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/solid";
 import moment from "moment";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
-const TimeSelect = () => {
+const TimeSelect = ({ setValue }) => {
   const [selectedDate, setSelectedDate] = useState(null);
   const [show, setShow] = useState(false);
   const startTime = moment("09:00 AM", "hh:mm A");
   const endTime = moment("10:00 PM", "hh:mm A");
   const interval = 60; // 60 minutes
+
+  useEffect(() => {
+    setValue && setValue(selectedDate);
+  }, [setValue, selectedDate]);
 
   const generateTimeSlots = () => {
     const timeSlots = [];
@@ -37,7 +41,7 @@ const TimeSelect = () => {
         )}
       </div>
       {show && (
-        <div className=" max-h-80 overflow-x-scroll shadow-lg rounded-md p-3 flex items-center justify-center flex-col gap-4 absolute top-16 left-0 right-0 z-50 bg-gray-200 dark:bg-gray-800">
+        <div className=" max-h-80 overflow-x-scroll shadow-lg rounded-md p-3 pt-60 flex items-center justify-center flex-col gap-4 absolute top-16 left-0 right-0 z-50 bg-gray-200 dark:bg-gray-800">
           <div className=" mt-28 w-full space-y-2">
             {timeSlots?.map((time, i) => (
               <div

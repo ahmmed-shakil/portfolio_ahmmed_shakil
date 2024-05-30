@@ -90,7 +90,8 @@ const Education = () => {
                     </Typography>
                     <Typography className=" text-sm font-semibold mt-0 pt-0">
                       Fundamentals of MERN Stack web development with
-                      JavaScript, React, Redux, Node.js, Mongodb and other tools
+                      JavaScript, TypeScript, React, Redux, Node.js, Mongodb,
+                      Mongoose and other tools
                     </Typography>
                   </div>
                 </div>
@@ -109,16 +110,15 @@ const Education = () => {
                     </Typography>
 
                     <Typography className=" text-sm font-semibold mt-0 pt-0">
-                      TypeScript, Mongoose, Next.js, Relational Diagrams and
-                      Modeling, PostgreSQL, Prisma, Linux, Docker, Docker
-                      Compose, CI/CD, Deployment on AWS, AWS S3, CloudFront,
-                      EC2, Amplify, Server Setup, Reverse Proxy, Load Balancing
-                      using Nginx, Testing (Unit & Integration), Cypress for
-                      End-to-End Testing, API Testing with Jest & Supertest,
-                      Testing React with React Testing Library & Vitest,
-                      GraphQL, Secure API Creation and Optimize Performance,
-                      Apollo-Client, Task breakdown technique & SDLC, Project
-                      management tools
+                      Next.js, Relational Diagrams and Modeling, PostgreSQL,
+                      Prisma, Linux, Docker, Docker Compose, CI/CD, Deployment
+                      on AWS, AWS S3, CloudFront, EC2, Amplify, Server Setup,
+                      Reverse Proxy, Load Balancing using Nginx, Testing (Unit &
+                      Integration), Cypress for End-to-End Testing, API Testing
+                      with Jest & Supertest, Testing React with React Testing
+                      Library & Vitest, GraphQL, Secure API Creation and
+                      Optimize Performance, Apollo-Client, Task breakdown
+                      technique & SDLC, Project management tools
                     </Typography>
                   </div>
                 </div>
