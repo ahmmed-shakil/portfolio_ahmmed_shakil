@@ -64,7 +64,7 @@ const Contact = () => {
       emailjs.send(serviceId, templateId, data, "t9vUBpAs6V5XJZn4X").then(
         (response) => {
           setIsLoading(false);
-          toast.success("Appoiment booked! I will get back to you soon!");
+          toast.success("Appointment booked! I will get back to you soon!");
           console.log("SUCCESS!", response.status, response.text);
         },
         (error) => {
