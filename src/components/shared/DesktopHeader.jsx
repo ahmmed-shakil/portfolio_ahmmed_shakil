@@ -81,7 +81,7 @@ const DesktopHeader = () => {
                     height={12}
                     className=" text-primary"
                   />
-                  <p className=" text-primary text-xs">Copied!</p>
+                  {/* <p className=" text-primary text-xs">Copied!</p> */}
                 </div>
               )}
             </div>
@@ -109,7 +109,7 @@ const DesktopHeader = () => {
                     height={12}
                     className=" text-primary"
                   />
-                  <p className=" text-primary text-xs">Copied!</p>
+                  {/* <p className=" text-primary text-xs">Copied!</p> */}
                 </div>
               )}
             </div>
@@ -119,7 +119,7 @@ const DesktopHeader = () => {
       <Layout>
         <div className=" grid grid-cols-header pb-5">
           <div className="flex items-center justify-between">
-            <NavLink to={"/"}>
+            <NavLink onClick={scrollToTop} to={"/"}>
               <h2 className="text-4xl font-semibold">
                 <span className="text-primary">Port</span>folio
               </h2>
