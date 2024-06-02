@@ -65,12 +65,10 @@ const Contact = () => {
         (response) => {
           setIsLoading(false);
           toast.success("Appointment booked! I will get back to you soon!");
-          console.log("SUCCESS!", response.status, response.text);
         },
         (error) => {
           console.log("🚀 ~ sendMail ~ error:", error);
           setIsLoading(false);
-          console.log("FAILED...", error);
         }
       );
     } catch (error) {

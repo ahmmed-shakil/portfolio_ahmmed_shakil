@@ -7,9 +7,9 @@ import { Link } from "react-router-dom";
 
 const DesktopFooter = () => {
   return (
-    <div className=" mt-14 md:mt-56 hidden lg:block">
+    <div className=" mt-14 md:mt-56 hidden lg:block bg-secondary text-slate-200">
       <hr className=" h-1 bg-primary w-full" />
-      <div className=" bg-secondary text-slate-200">
+      <div className=" ">
         <Layout>
           <div className=" space-y-5 pt-5 md:pt-24">
             <div className=" grid grid-cols-1 lg:grid-cols-3 justify-between items-start">

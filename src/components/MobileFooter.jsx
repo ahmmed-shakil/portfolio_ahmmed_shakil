@@ -209,7 +209,7 @@ const MobileFooter = () => {
               copyright &copy; 2024. Shakil Ahmmed Joy
             </p>
           </div>
-          <p className=" text-center pb-2">v 1.0.0</p>
+          <p className=" text-center pb-2 mb-0">v 1.0.0</p>
         </Layout>
       </div>
     </div>
