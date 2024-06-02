@@ -134,7 +134,7 @@ const MobileHeader = () => {
                   className={`nav-item ${
                     `${pathname}` === "/" &&
                     !window.location.hash &&
-                    "bg-primary text-white"
+                    "bg-primary text-white w-full"
                   }`}
                 >
                   {page.value}
